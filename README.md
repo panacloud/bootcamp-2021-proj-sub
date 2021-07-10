@@ -4,7 +4,7 @@ This repository is for submitting projects for [Bootcamp 2021](https://panacloud
 
 
 1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo.
-2. Clone the forkex repo to your local system.
+2. Clone the forked repo to your local system.
 3. Add a Git remote for the original repository.
 4. Create a branch with your own name in the forked repo to place your projects.
 5. Create a subdirectory in the project directory with your name as the project directory name. For example I will create a project directory named ziakhan as a subdirectory of projectone.
