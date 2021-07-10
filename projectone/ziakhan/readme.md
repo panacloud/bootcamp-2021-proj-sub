@@ -1,1 +1,1 @@
-The is project submittion by Zia Khan, which is an example submittion. 
+The is a project submited by Zia Khan. This is an example submittion. 
