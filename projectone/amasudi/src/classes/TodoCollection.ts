@@ -9,41 +9,41 @@ type ItemCounts = {
 export class TodoCollection {
 
     private nextId: number = 1;
-    private itemsMap = new Map<number, TodoItem>();
+    protected itemsMap = new Map<number, TodoItem>();
 
     constructor(public items: TodoItem[] = []) {
         items.forEach(item => this.itemsMap.set(item.id, item));
     }
 
-    public addTodo = (item: string): number => {
+    public addTodo(item: string): number {
         this.itemsMap.set(this.nextId, new TodoItem(this.nextId, item, false));
         return this.nextId++;
     }
 
-    public printAll = (completeOrNot: boolean = null): void => {
+    public printAll(completeOrNot: boolean = null): void {
         console.log(`ID\tTask\t\tCompleted\n=========================================`);
         let filteredItems : TodoItem[] = this.getAllItems(completeOrNot);
         if (filteredItems.length) filteredItems.forEach((item) => item.printDetails());
         else console.log("No items found.");
     }
 
-    public getItem = (id: number): TodoItem => {
+    public getTodo(id: number): TodoItem {
         return this.itemsMap.get(id);
     }
 
-    public removeItem = (id: number): void => {
+    public removeTodo(id: number): void {
         this.itemsMap.delete(id);
     }
 
-    public taskDone = (id: number): void => {
-        this.itemsMap.get(id).complete = true;
+    public markComplete(id: number, complete: boolean): void {
+        this.itemsMap.get(id).complete = complete;
     }
 
-    public getAllItems = (completeOrNot: boolean = null): TodoItem[] => {
+    public getAllItems(completeOrNot: boolean = null): TodoItem[] {
         return (completeOrNot != null) ? [...this.itemsMap.values()].filter(item => item.complete==completeOrNot) : [...this.itemsMap.values()];
     }
 
-    public removeItems = (completeOrNot: boolean = null): void => {
+    public removeTodos(completeOrNot: boolean = null): void {
         if (completeOrNot != null) {
             this.itemsMap.forEach(item => {
                 if (item.complete == completeOrNot) {
@@ -55,7 +55,7 @@ export class TodoCollection {
         }
     }
 
-    public getItemCount = (): ItemCounts => {
+    public getTodoCount(): ItemCounts {
         return {
             total: this.itemsMap.size, // OR we can also use this.getAllItems().length
             inCompleted: this.getAllItems(false).length,

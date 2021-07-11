@@ -2,14 +2,16 @@ import { TodoItem } from "./classes/TodoItem";
 import { TodoCollection } from "./classes/TodoCollection";
 import * as inquirer from "inquirer";
 import list = require("inquirer/lib/prompts/list");
+import { JsonTodoCollection } from "./classes/JsonTodoCollection";
 
+/*
 let todoList: TodoCollection = new TodoCollection();
 
-todoList.addTodo("Task 1");
-todoList.addTodo("Task 2");
-todoList.addTodo("Task 3");
-todoList.taskDone(2);
-
+todoList.addTodo("Todo 1");
+todoList.addTodo("Todo 2");
+todoList.addTodo("Todo 3");
+todoList.markComplete(2, true);
+*/
 /*
 console.log("All Completed:");
 todoList.printAll(true);
@@ -19,12 +21,14 @@ console.log("All Items:");
 todoList.printAll();
 */
 
-var addTaskAction = (): void => {
+let todoList: TodoCollection = new JsonTodoCollection([]);
+
+var addTodoAction = (): void => {
     console.clear();
     inquirer.prompt({
         type: "input",
         name: "add",
-        message: "Enter New Task:"
+        message: "Enter New Todo:"
     }).then(answers => {
         if (answers["add"]!=="") {
             todoList.addTodo(answers["add"]);
@@ -33,15 +37,15 @@ var addTaskAction = (): void => {
     });
 }
 
-var removeTaskAction = (): void => {
+var removeTodoAction = (): void => {
     console.clear();
     inquirer.prompt({
         type: "number",
         name: "remove",
-        message: "Enter Task ID:"
+        message: "Enter Todo ID:"
     }).then(answers => {
         if (answers["remove"]!=="") {
-            todoList.removeItem(answers["remove"]);
+            todoList.removeTodo(answers["remove"]);
         }
         showPrompt();
     });
@@ -52,31 +56,31 @@ var markCompleteAction = (): void => {
     inquirer.prompt({
         type: "number",
         name: "markCompleted",
-        message: "Enter Task ID:"
+        message: "Enter Todo ID:"
     }).then(answers => {
         if (answers["markCompleted"]!=="") {
-            todoList.taskDone(answers["markCompleted"]);
+            todoList.markComplete(answers["markCompleted"], true);
         }
         showPrompt();
     });
 }
 
-var getAllCompletedIncompletedTasksAction = (calledFromOutSide: boolean = true): void => {
+var getAllCompletedIncompletedTodosAction = (calledFromOutSide: boolean = true): void => {
     if (calledFromOutSide) console.clear();
     enum CommandsCompletedIncompleted {
-        Completed = "Completed Tasks.",
-        Incompleted = "Incompleted Tasks.",
+        Completed = "Completed Todos.",
+        Incompleted = "Incompleted Todos.",
         GoBack = "Go back to main optios."
     }
     inquirer.prompt({
         type: "list",
-        name: "showCompletedIncompletedTasks",
+        name: "showCompletedIncompletedTodos",
         message: "Choose an option:",
         choices: Object.values(CommandsCompletedIncompleted)
     }).then(answers => {
-        if (answers["showCompletedIncompletedTasks"] !== CommandsCompletedIncompleted.GoBack) {
-            todoList.printAll(answers["showCompletedIncompletedTasks"] === CommandsCompletedIncompleted.Completed);
-            getAllCompletedIncompletedTasksAction(false);
+        if (answers["showCompletedIncompletedTodos"] !== CommandsCompletedIncompleted.GoBack) {
+            todoList.printAll(answers["showCompletedIncompletedTodos"] === CommandsCompletedIncompleted.Completed);
+            getAllCompletedIncompletedTodosAction(false);
         } else {
             console.clear();
             showPrompt();
@@ -84,22 +88,22 @@ var getAllCompletedIncompletedTasksAction = (calledFromOutSide: boolean = true):
     });
 }
 
-var removeTasksAction = (calledFromOutSide : boolean = true): void => {
+var removeTodosAction = (calledFromOutSide : boolean = true): void => {
     if (calledFromOutSide) console.clear();
     enum CommandsCompletedIncompleted {
-        Completed = "Completed Tasks.",
-        Incompleted = "Incompleted Tasks.",
+        Completed = "Completed Todos.",
+        Incompleted = "Incompleted Todos.",
         GoBack = "Go back to main optios"
     }
     inquirer.prompt({
         type: "list",
-        name: "removeCompletedIncompletedTasks",
+        name: "removeCompletedIncompletedTodos",
         message: "Choose an option:",
         choices: Object.values(CommandsCompletedIncompleted)
     }).then(answers => {
-        if (answers["removeCompletedIncompletedTasks"] !== CommandsCompletedIncompleted.GoBack) {
-            todoList.removeItems(answers["removeCompletedIncompletedTasks"] === CommandsCompletedIncompleted.Completed);
-            removeTasksAction(false);
+        if (answers["removeCompletedIncompletedTodos"] !== CommandsCompletedIncompleted.GoBack) {
+            todoList.removeTodos(answers["removeCompletedIncompletedTodos"] === CommandsCompletedIncompleted.Completed);
+            removeTodosAction(false);
         } else {
             console.clear();
             showPrompt();
@@ -108,11 +112,11 @@ var removeTasksAction = (calledFromOutSide : boolean = true): void => {
 }
 
 enum Commands {
-    Add = "Add New Task",
-    Remove = "Remove Task by ID",
-    Complete = "Complete Task by ID",
-    AllCompletedIncompleted = "Display All Completed/Incompleted Tasks",
-    RemoveCompletedIncompleted = "Remove Completed/Incompleted Tasks",
+    Add = "Add New Todo",
+    Remove = "Remove Todo by ID",
+    Complete = "Complete Todo by ID",
+    AllCompletedIncompleted = "Display All Completed/Incompleted Todos",
+    RemoveCompletedIncompleted = "Remove Completed/Incompleted Todos",
     Quit = "Quit"
 }
 
@@ -127,19 +131,19 @@ var showPrompt = (): void => {
     }).then(answers => {
         switch (answers["commands"]) {
             case Commands.Add:
-                addTaskAction();
+                addTodoAction();
                 break;
             case Commands.Remove:
-                removeTaskAction();
+                removeTodoAction();
                 break;
             case Commands.Complete:
                 markCompleteAction();
                 break;
             case Commands.AllCompletedIncompleted:
-                getAllCompletedIncompletedTasksAction();
+                getAllCompletedIncompletedTodosAction();
                 break;
             case Commands.RemoveCompletedIncompleted:
-                removeTasksAction();
+                removeTodosAction();
                 break;
         }
     });

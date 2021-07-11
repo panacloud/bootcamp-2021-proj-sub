@@ -1,12 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const TodoCollection_1 = require("./classes/TodoCollection");
 const inquirer = require("inquirer");
-let todoList = new TodoCollection_1.TodoCollection();
-todoList.addTodo("Task 1");
-todoList.addTodo("Task 2");
-todoList.addTodo("Task 3");
-todoList.taskDone(2);
+const JsonTodoCollection_1 = require("./classes/JsonTodoCollection");
+/*
+let todoList: TodoCollection = new TodoCollection();
+
+todoList.addTodo("Todo 1");
+todoList.addTodo("Todo 2");
+todoList.addTodo("Todo 3");
+todoList.markComplete(2, true);
+*/
 /*
 console.log("All Completed:");
 todoList.printAll(true);
@@ -15,12 +18,13 @@ todoList.printAll(false);
 console.log("All Items:");
 todoList.printAll();
 */
-var addTaskAction = () => {
+let todoList = new JsonTodoCollection_1.JsonTodoCollection([]);
+var addTodoAction = () => {
     console.clear();
     inquirer.prompt({
         type: "input",
         name: "add",
-        message: "Enter New Task:"
+        message: "Enter New Todo:"
     }).then(answers => {
         if (answers["add"] !== "") {
             todoList.addTodo(answers["add"]);
@@ -28,15 +32,15 @@ var addTaskAction = () => {
         showPrompt();
     });
 };
-var removeTaskAction = () => {
+var removeTodoAction = () => {
     console.clear();
     inquirer.prompt({
         type: "number",
         name: "remove",
-        message: "Enter Task ID:"
+        message: "Enter Todo ID:"
     }).then(answers => {
         if (answers["remove"] !== "") {
-            todoList.removeItem(answers["remove"]);
+            todoList.removeTodo(answers["remove"]);
         }
         showPrompt();
     });
@@ -46,32 +50,32 @@ var markCompleteAction = () => {
     inquirer.prompt({
         type: "number",
         name: "markCompleted",
-        message: "Enter Task ID:"
+        message: "Enter Todo ID:"
     }).then(answers => {
         if (answers["markCompleted"] !== "") {
-            todoList.taskDone(answers["markCompleted"]);
+            todoList.markComplete(answers["markCompleted"], true);
         }
         showPrompt();
     });
 };
-var getAllCompletedIncompletedTasksAction = (calledFromOutSide = true) => {
+var getAllCompletedIncompletedTodosAction = (calledFromOutSide = true) => {
     if (calledFromOutSide)
         console.clear();
     let CommandsCompletedIncompleted;
     (function (CommandsCompletedIncompleted) {
-        CommandsCompletedIncompleted["Completed"] = "Completed Tasks.";
-        CommandsCompletedIncompleted["Incompleted"] = "Incompleted Tasks.";
+        CommandsCompletedIncompleted["Completed"] = "Completed Todos.";
+        CommandsCompletedIncompleted["Incompleted"] = "Incompleted Todos.";
         CommandsCompletedIncompleted["GoBack"] = "Go back to main optios.";
     })(CommandsCompletedIncompleted || (CommandsCompletedIncompleted = {}));
     inquirer.prompt({
         type: "list",
-        name: "showCompletedIncompletedTasks",
+        name: "showCompletedIncompletedTodos",
         message: "Choose an option:",
         choices: Object.values(CommandsCompletedIncompleted)
     }).then(answers => {
-        if (answers["showCompletedIncompletedTasks"] !== CommandsCompletedIncompleted.GoBack) {
-            todoList.printAll(answers["showCompletedIncompletedTasks"] === CommandsCompletedIncompleted.Completed);
-            getAllCompletedIncompletedTasksAction(false);
+        if (answers["showCompletedIncompletedTodos"] !== CommandsCompletedIncompleted.GoBack) {
+            todoList.printAll(answers["showCompletedIncompletedTodos"] === CommandsCompletedIncompleted.Completed);
+            getAllCompletedIncompletedTodosAction(false);
         }
         else {
             console.clear();
@@ -79,24 +83,24 @@ var getAllCompletedIncompletedTasksAction = (calledFromOutSide = true) => {
         }
     });
 };
-var removeTasksAction = (calledFromOutSide = true) => {
+var removeTodosAction = (calledFromOutSide = true) => {
     if (calledFromOutSide)
         console.clear();
     let CommandsCompletedIncompleted;
     (function (CommandsCompletedIncompleted) {
-        CommandsCompletedIncompleted["Completed"] = "Completed Tasks.";
-        CommandsCompletedIncompleted["Incompleted"] = "Incompleted Tasks.";
+        CommandsCompletedIncompleted["Completed"] = "Completed Todos.";
+        CommandsCompletedIncompleted["Incompleted"] = "Incompleted Todos.";
         CommandsCompletedIncompleted["GoBack"] = "Go back to main optios";
     })(CommandsCompletedIncompleted || (CommandsCompletedIncompleted = {}));
     inquirer.prompt({
         type: "list",
-        name: "removeCompletedIncompletedTasks",
+        name: "removeCompletedIncompletedTodos",
         message: "Choose an option:",
         choices: Object.values(CommandsCompletedIncompleted)
     }).then(answers => {
-        if (answers["removeCompletedIncompletedTasks"] !== CommandsCompletedIncompleted.GoBack) {
-            todoList.removeItems(answers["removeCompletedIncompletedTasks"] === CommandsCompletedIncompleted.Completed);
-            removeTasksAction(false);
+        if (answers["removeCompletedIncompletedTodos"] !== CommandsCompletedIncompleted.GoBack) {
+            todoList.removeTodos(answers["removeCompletedIncompletedTodos"] === CommandsCompletedIncompleted.Completed);
+            removeTodosAction(false);
         }
         else {
             console.clear();
@@ -106,11 +110,11 @@ var removeTasksAction = (calledFromOutSide = true) => {
 };
 var Commands;
 (function (Commands) {
-    Commands["Add"] = "Add New Task";
-    Commands["Remove"] = "Remove Task by ID";
-    Commands["Complete"] = "Complete Task by ID";
-    Commands["AllCompletedIncompleted"] = "Display All Completed/Incompleted Tasks";
-    Commands["RemoveCompletedIncompleted"] = "Remove Completed/Incompleted Tasks";
+    Commands["Add"] = "Add New Todo";
+    Commands["Remove"] = "Remove Todo by ID";
+    Commands["Complete"] = "Complete Todo by ID";
+    Commands["AllCompletedIncompleted"] = "Display All Completed/Incompleted Todos";
+    Commands["RemoveCompletedIncompleted"] = "Remove Completed/Incompleted Todos";
     Commands["Quit"] = "Quit";
 })(Commands || (Commands = {}));
 var showPrompt = () => {
@@ -124,19 +128,19 @@ var showPrompt = () => {
     }).then(answers => {
         switch (answers["commands"]) {
             case Commands.Add:
-                addTaskAction();
+                addTodoAction();
                 break;
             case Commands.Remove:
-                removeTaskAction();
+                removeTodoAction();
                 break;
             case Commands.Complete:
                 markCompleteAction();
                 break;
             case Commands.AllCompletedIncompleted:
-                getAllCompletedIncompletedTasksAction();
+                getAllCompletedIncompletedTodosAction();
                 break;
             case Commands.RemoveCompletedIncompleted:
-                removeTasksAction();
+                removeTodosAction();
                 break;
         }
     });
