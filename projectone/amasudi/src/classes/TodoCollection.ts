@@ -21,12 +21,18 @@ export class TodoCollection {
     }
 
     public printAll = (completeOrNot: boolean = null): void => {
+        console.log(`ID\tTask\t\tCompleted\n=========================================`);
         let filteredItems : TodoItem[] = this.getAllItems(completeOrNot);
-        filteredItems.forEach((item) => item.printDetails());
+        if (filteredItems.length) filteredItems.forEach((item) => item.printDetails());
+        else console.log("No items found.");
     }
 
     public getItem = (id: number): TodoItem => {
         return this.itemsMap.get(id);
+    }
+
+    public removeItem = (id: number): void => {
+        this.itemsMap.delete(id);
     }
 
     public taskDone = (id: number): void => {

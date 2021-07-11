@@ -7,7 +7,7 @@ class TodoItem {
         this.task = task;
         this.complete = complete;
         this.printDetails = () => {
-            console.log(`${this.id}\t${this.task}\t${this.complete}`);
+            console.log(`${this.id}\t${this.task}\t\t${this.complete}`);
         };
     }
 }
