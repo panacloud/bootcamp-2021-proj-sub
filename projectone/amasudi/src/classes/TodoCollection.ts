@@ -1,5 +1,11 @@
 import { TodoItem } from "./TodoItem";
 
+type ItemCounts = {
+    total: number,
+    inCompleted: number,
+    completed: number
+}
+
 export class TodoCollection {
 
     private nextId: number = 1;
@@ -29,5 +35,25 @@ export class TodoCollection {
 
     public getAllItems = (completeOrNot: boolean = null): TodoItem[] => {
         return (completeOrNot != null) ? [...this.itemsMap.values()].filter(item => item.complete==completeOrNot) : [...this.itemsMap.values()];
+    }
+
+    public removeItems = (completeOrNot: boolean = null): void => {
+        if (completeOrNot != null) {
+            this.itemsMap.forEach(item => {
+                if (item.complete == completeOrNot) {
+                    this.itemsMap.delete(item.id);
+                }
+            });
+        } else {
+            this.itemsMap = new Map<number, TodoItem>();
+        }
+    }
+
+    public getItemCount = (): ItemCounts => {
+        return {
+            total: this.itemsMap.size, // OR we can also use this.getAllItems().length
+            inCompleted: this.getAllItems(false).length,
+            completed: this.getAllItems(true).length
+        }
     }
 }
