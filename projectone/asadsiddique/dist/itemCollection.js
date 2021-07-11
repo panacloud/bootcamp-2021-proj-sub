@@ -12,6 +12,10 @@ class itemCollection {
         this.nextId++;
         this.items.push(todo);
     }
+    isCompleted(tsakId) {
+        let completed = this.items.find(item => item.id === tsakId);
+        completed.isCompleted = true;
+    }
     printDetails() {
         this.items.forEach((item) => console.log(item.printDetails()));
     }
