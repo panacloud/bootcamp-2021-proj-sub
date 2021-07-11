@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const TodoCollection_1 = require("./classes/TodoCollection");
+let todoList = new TodoCollection_1.TodoCollection();
+todoList.addTodo("Task 1");
+todoList.addTodo("Task 2");
+todoList.addTodo("Task 3");
+todoList.taskDone(2);
+console.log("All Completed:");
+todoList.printAll(true);
+console.log("All Incompleted:");
+todoList.printAll(false);
+console.log("All Items:");
+todoList.printAll();
