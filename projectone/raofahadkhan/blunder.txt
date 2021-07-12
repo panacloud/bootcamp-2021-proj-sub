@@ -1,0 +1,6 @@
+I have did a really big mistake I didn't read your post sir and build the whole project and the time I completed
+and pushed to my repo on github I got to know that I have to work on your forked repo so I have copied all the 
+files in this repo the way you said and if you want to see the original project and wana see the logs of it so 
+this is the link https://github.com/raofahadkhan/todo-console-and-persistent-data-app-in-typeScript-.git
+
+sorry for that big blunder and please consider my project
