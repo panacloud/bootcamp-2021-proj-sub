@@ -1,4 +1,4 @@
-export class itemTodo {
+export class todoTask {
   public constructor(
     public id: number,
     public task: string,

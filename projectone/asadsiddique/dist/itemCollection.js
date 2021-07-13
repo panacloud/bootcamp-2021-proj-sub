@@ -1,19 +1,37 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.itemCollection = void 0;
-const itemTodo_1 = require("./itemTodo");
+const todoTask_1 = require("./todoTask");
 class itemCollection {
-    constructor(items = []) {
+    constructor(userName, items = []) {
+        this.userName = userName;
         this.items = items;
-        this.nextId = 1;
+        this.nextTaskId = 1;
+        this.itemMap = new Map();
+        this.items.forEach((item) => this.itemMap.set(item.id, item));
     }
     addTodo(task) {
-        let todo = new itemTodo_1.itemTodo(this.nextId, task, false);
-        this.nextId++;
+        let todo = new todoTask_1.todoTask(++this.nextTaskId, task, false);
+        // this.nextTaskId++;
         this.items.push(todo);
+        this.itemMap.set(this.nextTaskId, todo);
+        // console.log("VAlues: ",this.itemMap.values())
+    }
+    getTodoById(taskId) {
+        return this.itemMap.get(taskId);
+    }
+    getTodoItems(isCompleted) {
+        return [...this.itemMap.values()].filter((item) => isCompleted || !item.isCompleted);
+    }
+    removeCompletedTask() {
+        this.itemMap.forEach((item) => {
+            if (item.isCompleted) {
+                this.itemMap.delete(item.id);
+            }
+        });
     }
     isCompleted(tsakId) {
-        let completed = this.items.find(item => item.id === tsakId);
+        let completed = this.items.find((item) => item.id === tsakId);
         completed.isCompleted = true;
     }
     printDetails() {
