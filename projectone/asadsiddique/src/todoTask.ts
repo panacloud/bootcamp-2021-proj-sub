@@ -2,7 +2,7 @@ export class todoTask {
   public constructor(
     public id: number,
     public task: string,
-    public isCompleted: boolean
+    public isCompleted: boolean = false
   ) {
     this.id = id;
     this.task = task;
