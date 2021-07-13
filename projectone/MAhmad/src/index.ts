@@ -6,6 +6,10 @@ allTodo.addTodo('task');
 allTodo.addTodo('task2');
 allTodo.addTodo('task3');
 
-allTodo.completeTodo(1);
+allTodo.completeTodo(3);
+
+allTodo.deleteTodo(2);
+
+allTodo.deleteDoneTodo();
 
 allTodo.printTodos();

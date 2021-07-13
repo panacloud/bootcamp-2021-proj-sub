@@ -6,16 +6,31 @@ class TodoList {
     constructor(todos = []) {
         this.todos = todos;
         this.ID = 1;
+        this.todoMap = new Map();
     }
     addTodo(name) {
-        this.todos.push(new todo_1.Todo(this.ID, name, false));
+        this.todoMap.set(this.ID, new todo_1.Todo(this.ID, name, false));
         return this.ID++;
     }
+    getTodo(ID) {
+        return this.todoMap.get(ID);
+    }
     completeTodo(ID) {
-        this.todos.find((ID) => ID.status = true);
+        let completeTodo = this.getTodo(ID);
+        completeTodo.status = true;
+    }
+    deleteTodo(ID) {
+        this.todoMap.delete(ID);
+    }
+    deleteDoneTodo() {
+        this.todoMap.forEach((todo) => {
+            if (todo.status) {
+                this.todoMap.delete(todo.id);
+            }
+        });
     }
     printTodos() {
-        this.todos.forEach((todo) => todo.printTodo());
+        this.todoMap.forEach((todo) => todo.printTodo());
     }
 }
 exports.TodoList = TodoList;
