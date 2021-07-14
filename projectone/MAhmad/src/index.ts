@@ -7,7 +7,7 @@ enum Commands {
     ShowDone = "Show Completed Todos",
     ShowUndone = "Show Incomplete Todos",
     ShowStats = "Show Stats of Todos",
-    // AddTodos = "Add Todos",
+    AddTodos = "Add Todos",
     // DelTodos = "Delete Todos",
     // DoneTodos = "Complete Todo",
     DelDoneTodo = "Delete Completed Todos",
@@ -22,18 +22,18 @@ function todoByStatus(Status: boolean): void {
 
 allTodo.printTodos();
 
-// function promptAdd(): void {
-//     inquirer.prompt({
-//         type: "input",
-//         name: "add",
-//         message: "Enter Todo:"
-//     }).then(answers => {
-//         if (answers["add"] !== "") {
-//             allTodo.addTodo(answers["add"]);
-//         }
-//         promptUser();
-//     });
-// }
+function promptAdd(): void {
+    inquirer.prompt({
+        type: "input",
+        name: "add",
+        message: "Enter Todo:"
+    }).then(answers => {
+        if (answers["add"] !== "") {
+            allTodo.addTodo(answers["add"]);
+        }
+        promptUser();
+    });
+}
 
 // function promptDel(): void {
 //     inquirer.prompt({
@@ -84,8 +84,8 @@ function promptUser(): void {
                 console.log(`Completed: ${allTodo.countTodo().complete}`);
                 console.log(`Incomplete: ${allTodo.countTodo().incomplete}`);
                 promptUser();
-            // case Commands.AddTodos:
-            //     promptAdd();
+            case Commands.AddTodos:
+                promptAdd();
             // case Commands.DelTodos:
             //     promptDel();
             // case Commands.DoneTodos:
