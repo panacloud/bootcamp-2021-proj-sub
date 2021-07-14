@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "complete": false,
+      "id": 1,
+      "task": "Do AIC Assignment"
+    },
+    {
+      "complete": false,
+      "id": 2,
+      "task": "Prepare CNC Quiz"
+    },
+    {
+      "complete": false,
+      "id": 3,
+      "task": "Attend IOT Class"
+    },
+    {
+      "complete": true,
+      "id": 4,
+      "task": "Do Bootcamp2021 project1"
+    },
+    {
+      "complete": false,
+      "id": 5,
+      "task": "Take bootcamp2020 class 9"
+    }
+  ]
+}
