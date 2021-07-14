@@ -3,18 +3,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TodoList = void 0;
 const todo_1 = require("./todo");
 class TodoList {
-    constructor() {
+    constructor(userName, todos = []) {
+        this.userName = userName;
+        this.todos = todos;
         this.ID = 1;
         this.todoMap = new Map();
     }
-    // public constructor(public todos: Todo[] = []) {
-    // }
     addTodo(name) {
         this.todoMap.set(this.ID, new todo_1.Todo(this.ID, name, false));
         return this.ID++;
     }
     getTodo(ID) {
         return this.todoMap.get(ID);
+    }
+    getAllTodos() {
+        return [...this.todoMap.values()];
     }
     getTodoWithStatus(statusTodo) {
         return [...this.todoMap.values()]
@@ -42,6 +45,7 @@ class TodoList {
         });
     }
     printTodos() {
+        this.todoMap.size > 0 ? console.log(`ID \t Name \t Status`) : null;
         this.todoMap.forEach((todo) => todo.printTodo());
     }
 }

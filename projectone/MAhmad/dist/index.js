@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const todoList_1 = require("./todoList");
 const inquirer = require("inquirer");
+const jsonTodoCollection_1 = require("./jsonTodoCollection");
 var Commands;
 (function (Commands) {
     Commands["ShowAllTodos"] = "Show All Todos";
@@ -14,16 +14,11 @@ var Commands;
     Commands["DelDoneTodo"] = "Delete Completed Todos";
     Commands["Quit"] = "Quit";
 })(Commands || (Commands = {}));
-let allTodo = new todoList_1.TodoList();
-allTodo.addTodo('task');
-allTodo.addTodo('task2');
-allTodo.addTodo('task3');
-allTodo.completeTodo(3);
-allTodo.deleteTodo(2);
+let allTodo = new jsonTodoCollection_1.JsonTodoCollection("Ahmad", []);
 function todoByStatus(Status) {
     allTodo.getTodoWithStatus(Status).forEach((todo) => todo.printTodo());
 }
-// allTodo.deleteDoneTodo();
+console.log(`${allTodo.userName}'s Todo List`);
 allTodo.printTodos();
 function promptAdd() {
     inquirer.prompt({
@@ -39,25 +34,29 @@ function promptAdd() {
 }
 function promptDel() {
     inquirer.prompt({
-        type: "number",
-        name: "del",
-        message: "Enter TodoID to delete:"
+        type: "checkbox",
+        name: "Del",
+        message: "Mark the todos to delete them:",
+        choices: allTodo.getAllTodos().map(todo => ({ name: todo.name, value: todo.id, checked: todo.status }))
     }).then(answers => {
-        if (answers["del"] !== "") {
-            allTodo.deleteTodo(answers["del"]);
-        }
+        let deletedTodos = answers["Del"];
+        deletedTodos.forEach(todo => {
+            allTodo.deleteTodo(todo);
+        });
         promptUser();
     });
 }
 function promptDone() {
     inquirer.prompt({
-        type: "number",
+        type: "checkbox",
         name: "Done",
-        message: "Enter TodoID to Complete:"
+        message: "Mark the todos to complete them:",
+        choices: allTodo.getTodoWithStatus(false).map(todo => ({ name: todo.name, value: todo.id, checked: todo.status }))
     }).then(answers => {
-        if (answers["Done"] !== "") {
-            allTodo.completeTodo(answers["Done"]);
-        }
+        let completedTodos = answers["Done"];
+        completedTodos.forEach(todo => {
+            allTodo.completeTodo(todo);
+        });
         promptUser();
     });
 }
@@ -70,22 +69,39 @@ function promptUser() {
         // badProperty: true
     }).then(answers => {
         switch (answers["command"]) {
-            case Commands.ShowDone:
-                todoByStatus(true);
-                promptUser();
-            case Commands.ShowUndone:
-                todoByStatus(false);
-                promptUser();
             case Commands.ShowAllTodos:
                 allTodo.printTodos();
                 promptUser();
-        }
-        switch (answers["command"]) {
+                break;
+            case Commands.ShowDone:
+                todoByStatus(true);
+                promptUser();
+                break;
+            case Commands.ShowUndone:
+                todoByStatus(false);
+                promptUser();
+                break;
             case Commands.ShowStats:
                 console.log(`Total: ${allTodo.countTodo().total}`);
                 console.log(`Completed: ${allTodo.countTodo().complete}`);
                 console.log(`Incomplete: ${allTodo.countTodo().incomplete}`);
                 promptUser();
+                break;
+            case Commands.AddTodos:
+                promptAdd();
+                break;
+            case Commands.DelTodos:
+                promptDel();
+                break;
+            case Commands.DoneTodos:
+                promptDone();
+                break;
+            case Commands.DelDoneTodo:
+                allTodo.deleteDoneTodo();
+                promptUser();
+                break;
+            case Commands.Quit:
+                break;
         }
     });
 }

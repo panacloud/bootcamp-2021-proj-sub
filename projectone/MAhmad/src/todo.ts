@@ -5,7 +5,7 @@ export class Todo {
     }
 
     public printTodo(): void {
-        console.log(`ID: ${this.id} \t Name: ${this.name} \t Status: ${this.status}`);
+        console.log(`${this.id} \t ${this.name} \t ${this.status? 'Completed': 'Incomplete'}`);
     }
 
 }

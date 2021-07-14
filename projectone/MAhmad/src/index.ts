@@ -1,6 +1,7 @@
 import { TodoList } from "./todoList";
 import * as inquirer from 'inquirer';
 import { Todo } from "./todo";
+import { JsonTodoCollection } from "./jsonTodoCollection";
 
 enum Commands {
     ShowAllTodos = "Show All Todos",
@@ -14,22 +15,13 @@ enum Commands {
     Quit = "Quit"
 }
 
-let allTodo: TodoList = new TodoList();
-
-allTodo.addTodo('task');
-allTodo.addTodo('task2');
-allTodo.addTodo('task3');
-
-allTodo.completeTodo(3);
-
-allTodo.deleteTodo(2);
+let allTodo: TodoList = new JsonTodoCollection("Ahmad", []);
 
 function todoByStatus(Status: boolean): void {
     allTodo.getTodoWithStatus(Status).forEach((todo: Todo) => todo.printTodo());
 }
 
-// allTodo.deleteDoneTodo();
-
+console.log(`${allTodo.userName}'s Todo List`);
 allTodo.printTodos();
 
 function promptAdd(): void {
@@ -47,26 +39,30 @@ function promptAdd(): void {
 
 function promptDel(): void {
     inquirer.prompt({
-        type: "number",
-        name: "del",
-        message: "Enter TodoID to delete:"
+        type: "checkbox",
+        name: "Del",
+        message: "Mark the todos to delete them:",
+        choices: allTodo.getAllTodos().map(todo => ({ name: todo.name, value: todo.id, checked: todo.status }))
     }).then(answers => {
-        if (answers["del"] !== "") {
-            allTodo.deleteTodo(answers["del"]);
-        }
+        let deletedTodos = answers["Del"] as number[];
+        deletedTodos.forEach(todo => {
+            allTodo.deleteTodo(todo);
+        })
         promptUser();
     });
 }
 
 function promptDone(): void {
     inquirer.prompt({
-        type: "number",
+        type: "checkbox",
         name: "Done",
-        message: "Enter TodoID to Complete:"
+        message: "Mark the todos to complete them:",
+        choices: allTodo.getTodoWithStatus(false).map(todo => ({ name: todo.name, value: todo.id, checked: todo.status }))
     }).then(answers => {
-        if (answers["Done"] !== "") {
-            allTodo.completeTodo(answers["Done"]);
-        }
+        let completedTodos = answers["Done"] as number[];
+        completedTodos.forEach(todo => {
+            allTodo.completeTodo(todo);
+        })
         promptUser();
     });
 }

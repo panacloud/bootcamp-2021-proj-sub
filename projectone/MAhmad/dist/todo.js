@@ -8,7 +8,7 @@ class Todo {
         this.status = status;
     }
     printTodo() {
-        console.log(`ID: ${this.id} \t Name: ${this.name} \t Status: ${this.status}`);
+        console.log(`${this.id} \t ${this.name} \t ${this.status ? 'Completed' : 'Incomplete'}`);
     }
 }
 exports.Todo = Todo;
