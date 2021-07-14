@@ -25,21 +25,28 @@ class TodoCollection {
             item.printTask()
         })
     }
+    
+    public taskID(id: number): any {
+        this.todos.filter((item) => {
+            item.iD === id
+        })
+    }
+
+    taskDone(id: number): void {
+        this.taskID(id).isDone = true;
+    }
+
   
-    public addTask(todoTask: string, completed: boolean) {
+    public addTask(todoTask: string) {
         let id = Math.floor(Math.random() * 100);
         
-        if(todoTask && completed) {
-            let tasks: Todo = new Todo(todoTask, completed, id);
-            this.todos.push(tasks);
+        let tasks: Todo = new Todo(todoTask, false, id);
+        this.todos.push(tasks);
 
-            this.printTodo();
-            
-        } else {
-            console.log('Please enter all Fields')
-        }
+        this.printTodo();
     }
-}
+};
 
 let collection: TodoCollection = new TodoCollection();
-collection.addTask('task-01', true);
+collection.addTask('task-01');
+collection.taskDone(70)
