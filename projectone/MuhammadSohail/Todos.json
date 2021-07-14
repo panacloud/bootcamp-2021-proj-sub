@@ -19,6 +19,11 @@
       "id": 6,
       "task": "build apparel bot",
       "complete": false
+    },
+    {
+      "id": 2,
+      "task": "Daily Backup",
+      "complete": false
     }
   ]
 }
