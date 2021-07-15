@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const itemCollection_1 = require("./itemCollection");
+console.clear();
+let col1 = new itemCollection_1.ItemCollection();
+col1.addTodo("Go to Bazar");
+col1.addTodo("Take classes on zoom");
+col1.addTodo("Finish college assignment");
+col1.taskDone(1);
+col1.taskDone(3);
+col1.printDetails();
