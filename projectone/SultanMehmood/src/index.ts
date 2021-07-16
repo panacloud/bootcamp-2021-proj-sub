@@ -1,16 +1,97 @@
 import { TodoItem } from "./todoItem";
-import {TodoCollection} from "./todoCollection";
-
-let list : TodoCollection = new TodoCollection();
-
-list.addTodo("Buy Mango");
-list.addTodo("Buy Meat");
-list.addTodo("Get Haircut");
-list.addTodo("Go for a walk");
+import { TodoCollection } from "./todoCollection";
+import * as inquirer from 'inquirer';
 
 
-list.taskDone(2);
+let todos: TodoItem[] = [
+  new TodoItem(1, "MSIC"),
+  new TodoItem(2, "Bootcamp 2021"),
+  new TodoItem(3, "AIC", true),
+  new TodoItem(4, "Job"),
+];
 
-list.printAll();
+let collection: TodoCollection = new TodoCollection("Sultan", todos);
+let showCompleted = true;
+
+function displayTodoList(): void {
 
 
+// console.clear();
+console.log(`${collection.userName}'s Todo List`
++ `(${collection.getItemCounts().incomplete } items to do)`);
+collection.getTodoItems(showCompleted).forEach(item => item.printDetails());
+}
+enum Commands {
+  Add = "Add New Task",
+  Complete = "Complete Task",
+  Toggle = "Show/Hide Completed",
+  Purge = "Remove Completed Tasks",
+  Quit = "Quit"
+}
+
+function promptAdd(): void{
+  console.clear();
+  inquirer.prompt({type: "input", name: "add", message: "Enter task: "})
+    .then(answers => {if (answers["add"] !== "") {
+      collection.addTodo(answers["add"]);
+    }
+    promptUser();
+  })
+}
+
+function promptComplete(): void{
+  console.clear();
+  inquirer.prompt({
+    type: "checkbox",
+    name: "complete",
+    message: "Mark Tasks Complete",
+    choices: collection.getTodoItems(showCompleted).map(item =>({ name: item.task, value: item.id, checked: item.complete}))
+  }).then(answeres => { 
+    let CompletedTasks = answeres["complete"] as number [];
+    collection.getTodoItems(true).forEach(item =>
+      collection.markComplete(item.id, CompletedTasks.find(id => id === item.id) != undefined));
+      promptUser();
+    })
+
+
+}
+function promptUser(): void {
+  console.clear();
+  displayTodoList();
+  inquirer.prompt({
+    type: 'list',
+    name: 'command',
+    message: 'Choose option',
+    choices: Object.values(Commands)}).then(answeres => {
+       switch (answeres["command"]){
+         case Commands.Toggle:
+           showCompleted = !showCompleted;
+           promptUser();
+           break;
+         case Commands.Add:
+           promptAdd();
+           break;
+          case Commands.Complete:
+            if (collection.getItemCounts().incomplete > 0) {
+              promptComplete(); 
+            } else { 
+              promptUser();
+            }
+            break;
+          case Commands.Purge:
+            collection.removeComplete();
+            promptUser();
+            break;
+    }
+
+  })
+}
+
+promptUser();
+// let newId: number = collection.addTodo("Go for Run");
+// let todoItem: TodoItem = collection.getTodoById(newId);
+
+// //todoItem.printDetails();
+// collection.removeComplete();
+// // collection.addTodo(todoItem);
+// collection.getTodoItems(true).forEach((item) => item.printDetails());

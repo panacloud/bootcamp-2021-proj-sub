@@ -1,27 +1,53 @@
-import {TodoItem} from "./TodoItem";
+import { TodoItem } from "./todoItem";
 
-export class TodoCollection{
+type ItemCounts = {
+  total: number,
+  incomplete: number
+}
 
-    private nextId: number = 1;
+export class TodoCollection {
+  private nextId: number = 1;
+  private itemMap = new Map<number, TodoItem>();
 
-    constructor(public items: TodoItem[] = [] ){
-
+  constructor(public userName: string, todoItems: TodoItem[] = []) {
+    todoItems.forEach((item) => this.itemMap.set(item.id, item));
+  }
+  addTodo(task: string): number {
+    while (this.getTodoById(this.nextId)) {
+      this.nextId++;
     }
+    this.itemMap.set(this.nextId, new TodoItem(this.nextId, task));
+    return this.nextId;
+  }
+  getTodoById(id: number): TodoItem {
+    return this.itemMap.get(id);
+  }
 
-    public addTodo(item: string): number{
-        this.items.push(new TodoItem(this.nextId, item, false));
-        return this.nextId++;
-    }
+  getTodoItems(includeComplete: boolean): TodoItem[] {
+    return [...this.itemMap.values()].filter(
+      (item) => includeComplete || !item.complete
+    );
+  }
 
-    public printAll(): void {
-        this.items.forEach((item) => item.printDetails());
+  markComplete(id: number, complete: boolean) {
+    const todoItem = this.getTodoById(id);
+    if (todoItem) {
+      todoItem.complete = complete;
     }
+  }
 
-    public getItem(id: number): TodoItem {
-        return this.items.find((item) => item.id == id);
-    }
+  removeComplete() {
+    this.itemMap.forEach((item) => {
+      if (item.complete) {
+        this.itemMap.delete(item.id);
+      }
+    });
+  }
 
-    public taskDone(id: number): void{
-        this.getItem(id).complete = true;
-    }
+  getItemCounts(): ItemCounts {
+    return{
+      total: this.itemMap.size,
+      incomplete: this.getTodoItems(false).length
+    };
+  }
 }
