@@ -32,4 +32,13 @@ export class TodoCollection {
         }
     }
 
+    removeComplete(){
+        this.itemMap.forEach(item =>{
+            if(item.complete){
+                this.itemMap.delete(item.id);
+            }
+        }
+        )
+    }
+
 }
