@@ -7,7 +7,7 @@ let todos: TodoItem[] = [
     new TodoItem(1, "Buy Afghani Tikka"), new TodoItem(2, "Buy SHirt"),
     new TodoItem(3, "Buy Coffee"), new TodoItem(4, "Visit Hospital", true)];
 
-let collection: TodoCollection = new JsonTodoCollection("Imran", todos);
+let collection: TodoCollection = new JsonTodoCollection("Imran82ali", todos);
 let showCompleted = true;
 
 function displayTodoList(): void {
