@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "id": 2,
+      "task": "Complete Bootcamp2021 Project One",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "task": "Attend Class",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "task": "Complete Graphic Design Projects",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "task": "Go for a walk",
+      "complete": false
+    }
+  ]
+}
