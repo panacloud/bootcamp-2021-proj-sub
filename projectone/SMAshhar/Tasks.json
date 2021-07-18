@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "taskId": 1,
+      "task": "first task",
+      "done": true
+    },
+    {
+      "taskId": 2,
+      "task": "eat mangos",
+      "done": true
+    },
+    {
+      "taskId": 3,
+      "task": "Buy Mango",
+      "done": true
+    },
+    {
+      "taskId": 4,
+      "task": "Buy Meat",
+      "done": true
+    },
+    {
+      "taskId": 5,
+      "task": "Get Haircut",
+      "done": true
+    },
+    {
+      "taskId": 6,
+      "task": "Work Out",
+      "done": false
+    }
+  ]
+}
