@@ -1,0 +1,54 @@
+{
+  "tasks": [
+    {
+      "complete": false,
+      "id": 1,
+      "task": "Buy Flowers"
+    },
+    {
+      "complete": false,
+      "id": 2,
+      "task": "Get Shoes"
+    },
+    {
+      "complete": false,
+      "id": 3,
+      "task": "Collect Tickets"
+    },
+    {
+      "complete": false,
+      "id": 4,
+      "task": "Go For Shopping"
+    },
+    {
+      "complete": false,
+      "id": 6,
+      "task": "Complete the project"
+    },
+    {
+      "complete": false,
+      "id": 7,
+      "task": "Water the plants"
+    },
+    {
+      "complete": false,
+      "id": 8,
+      "task": "Pay Electricity Bill"
+    },
+    {
+      "complete": false,
+      "id": 9,
+      "task": "Refuel The Car"
+    },
+    {
+      "complete": false,
+      "id": 10,
+      "task": "Do Birthday Arrangements"
+    },
+    {
+      "complete": false,
+      "id": 11,
+      "task": "Go For Shopping"
+    }
+  ]
+}
