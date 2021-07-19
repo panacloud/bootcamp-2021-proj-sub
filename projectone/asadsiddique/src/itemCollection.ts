@@ -11,7 +11,7 @@ type countItems = {
 export class itemCollection {
   // Attributes of items Collections...
   private nextTaskId: number = 1;
-  private itemMap = new Map<number, todoTask>();
+  protected itemMap = new Map<number, todoTask>();
 
   public constructor(public userName: string, public items: todoTask[] = []) {
     this.items.forEach((item) => this.itemMap.set(item.id, item));

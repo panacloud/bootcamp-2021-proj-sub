@@ -1,6 +1,7 @@
 import { itemCollection } from "./itemCollection";
 import { todoTask } from "./todoTask";
 import * as inquirer from "inquirer";
+import { JsonTodoCollection } from "./JsonTodoCollection";
 
 // let col_1 = new itemCollection("Asad");
 
@@ -22,7 +23,7 @@ let todos: todoTask[] = [
   new todoTask(4, "Call ALi"),
 ];
 
-let collection: itemCollection = new itemCollection("Adam", todos);
+let collection: itemCollection = new JsonTodoCollection("Adam", todos);
 
 let showCompleted: boolean = true;
 
@@ -81,6 +82,7 @@ function prompComplete(): void {
     });
 }
 
+// Commands to execute...
 enum Commands {
   Add = "Add new Task",
   Complete = "Complete Task",
