@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "ES2018",
+        "outDir": "./dir",
+        "rootDir": "./src",
+        "module": "commonjs",
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+}
