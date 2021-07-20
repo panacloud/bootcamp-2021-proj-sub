@@ -12,3 +12,7 @@ This repository is for submitting projects for [Bootcamp 2021](https://panacloud
 7. Commit the changes to your branch.
 8. Push the branch to Github.
 9. Open a [pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) from the new branch to the original repo.
+
+[Watch the video to learn how to submit projects (It is made by a student)](https://www.youtube.com/watch?v=o1heuBdQqxc)
+
+
