@@ -1,18 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// imports
-const todoItem_1 = require("./todoItem");
-const todoCollection_1 = require("./todoCollection");
 const inquirer = require("inquirer");
+const jsonTodoCollection_1 = require("./jsonTodoCollection");
 // List of Todos - Dummy data
-let todos = [
-    new todoItem_1.TodoItem(1, "Go for run", true),
-    new todoItem_1.TodoItem(2, "Play Cricket", false),
-    new todoItem_1.TodoItem(5, "Go to Class"),
-    new todoItem_1.TodoItem(6, "Eat Lunch", true),
-];
+let todos = [];
 // Collection of todos
-let collection = new todoCollection_1.TodoCollection("Hassan", todos);
+let collection = new jsonTodoCollection_1.JsonTodoCollection("Hassan", todos);
 // For displaying completed tasks
 let showCompleted = true;
 // Function to display ToDo list, this function will be used with inquirer

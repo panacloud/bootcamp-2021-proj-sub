@@ -13,7 +13,8 @@ export class TodoCollection {
   private nextId: number = 1;
   // by this way we can store a todo item in the form of key value pair
   // itemMap have keys in form of number an dvalues are of TodoItem type
-  private itemMap = new Map<number, TodoItem>();
+  // property to be accessed by class and sub Class
+  protected itemMap = new Map<number, TodoItem>();
 
   constructor(public userName: string, public todoItems: TodoItem[] = []) {
     // no statements required here

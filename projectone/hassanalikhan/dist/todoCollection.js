@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TodoCollection = void 0;
+// imports
 const todoItem_1 = require("./todoItem");
 class TodoCollection {
     constructor(userName, todoItems = []) {
@@ -10,6 +11,7 @@ class TodoCollection {
         this.nextId = 1;
         // by this way we can store a todo item in the form of key value pair
         // itemMap have keys in form of number an dvalues are of TodoItem type
+        // property to be accessed by class and sub Class
         this.itemMap = new Map();
         // no statements required here
         // TS compiler will auto genrate these
