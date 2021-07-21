@@ -7,6 +7,12 @@
     "bootcamp2021-project1-todoapp": "./bin/run"
   },
   "bugs": "https://github.com/SyedHuzaifa007/bootcamp2021-project1-todoapp/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.2",
+    "tslib": "^1.14.1"
+  },
   "devDependencies": {
     "@oclif/dev-cli": "^1.26.0",
     "@types/node": "^10.17.60",
@@ -43,11 +49,5 @@
     "test": "echo NO TESTS",
     "version": "oclif-dev readme && git add README.md"
   },
-  "types": "lib/index.d.ts",
-  "dependencies": {
-    "@oclif/command": "^1.8.0",
-    "@oclif/config": "^1.17.0",
-    "@oclif/plugin-help": "^3.2.2",
-    "tslib": "^1.14.1"
-  }
+  "types": "lib/index.d.ts"
 }
