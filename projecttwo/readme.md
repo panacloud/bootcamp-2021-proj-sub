@@ -44,7 +44,7 @@ Edited the new add.ts file as it:
     b. If arg not given, display a message to type in a new task.
 
 2. The command line for its active will be:
-todo add "New todo Item"        //COmmand line
+bin/run add "New todo Item"        //COmmand line
 
 3. Used Chalk Module to bring colours to our result by adding line:
 
