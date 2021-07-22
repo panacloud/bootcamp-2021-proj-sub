@@ -1,10 +1,10 @@
 {
-  "name": "todo",
+  "name": "ashhtodo",
   "description": "A Todo app for CLI",
   "version": "1.0.0",
-  "author": "SMAshhar @SMAshhar",
+  "author": "SMAshhar",
   "bin": {
-    "todo": "./bin/run"
+    "ashhtodo": "./bin/run"
   },
   "bugs": "https://github.com/SMAshhar/AshhCli-todo/issues",
   "devDependencies": {
@@ -58,7 +58,9 @@
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
     "@oclif/plugin-help": "^3.2.2",
+    "ashhtodo": "^1.0.0",
     "chalk": "^2.4.2",
+    "cli-table": "^0.3.6",
     "tslib": "^1.14.1"
   }
 }

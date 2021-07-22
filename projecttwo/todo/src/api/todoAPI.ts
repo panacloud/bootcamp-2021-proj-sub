@@ -39,7 +39,7 @@ class TodoAPI {
         this.fileMethod()
     }
 
-    list () {
+    show () {
         return this.todos;
     }
 

@@ -17,11 +17,11 @@ A Todo app for CLI
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g todo
+$ npm install -g ashhtodo
 $ todo COMMAND
 running command...
 $ todo (-v|--version|version)
-todo/1.0.0 linux-x64 node-v10.19.0
+ashhtodo/1.0.0 linux-x64 node-v10.19.0
 $ todo --help [COMMAND]
 USAGE
   $ todo COMMAND
@@ -30,9 +30,34 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`todo add [TODO]`](#todo-add-todo)
+* [`todo done [INDEX]`](#todo-done-index)
 * [`todo hello [FILE]`](#todo-hello-file)
 * [`todo help [COMMAND]`](#todo-help-command)
-* [`todo remove [FILE]`](#todo-remove-file)
+* [`todo remove [INDEX]`](#todo-remove-index)
+* [`todo show`](#todo-show)
+
+## `todo add [TODO]`
+
+Add new todo item here.
+
+```
+USAGE
+  $ todo add [TODO]
+```
+
+_See code: [src/commands/add.ts](https://github.com/SMAshhar/AshhCli-todo/blob/v1.0.0/src/commands/add.ts)_
+
+## `todo done [INDEX]`
+
+Marks a task complete
+
+```
+USAGE
+  $ todo done [INDEX]
+```
+
+_See code: [src/commands/done.ts](https://github.com/SMAshhar/AshhCli-todo/blob/v1.0.0/src/commands/done.ts)_
 
 ## `todo hello [FILE]`
 
@@ -71,19 +96,25 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
-## `todo remove [FILE]`
+## `todo remove [INDEX]`
 
-describe the command here
+Remove a todo from list
 
 ```
 USAGE
-  $ todo remove [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ todo remove [INDEX]
 ```
 
 _See code: [src/commands/remove.ts](https://github.com/SMAshhar/AshhCli-todo/blob/v1.0.0/src/commands/remove.ts)_
+
+## `todo show`
+
+Displays all Tasks
+
+```
+USAGE
+  $ todo show
+```
+
+_See code: [src/commands/show.ts](https://github.com/SMAshhar/AshhCli-todo/blob/v1.0.0/src/commands/show.ts)_
 <!-- commandsstop -->

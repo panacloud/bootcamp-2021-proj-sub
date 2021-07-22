@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import {Command, flags} from '@oclif/command'
 import chalk from 'chalk'
 import TodoAPI from '../api/todoAPI'

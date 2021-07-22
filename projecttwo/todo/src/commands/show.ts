@@ -1,27 +1,31 @@
+#!/usr/bin/env node
+
 import {Command, flags} from '@oclif/command'
 import todoAPI from '../api/todoAPI'
 import chalk from 'chalk'
-const Table = require('cli-table')
+const table = require('cli-table')
 
 
 export default class List extends Command {
   static description = 'Displays all Tasks'
 
   async run() {
-    const table = new Table( {
+    const tables = new table( {
       head: [
         'Index',
         'Task',
-        'Status'
+        'Done',
       ]
     })
 
-    const todos = todoAPI.list()
+    const todos = todoAPI.show()
     for (let i = 0; i < todos.length;i++) {
+      this.log(`${i}`)
       const todo = todos[i]
       const status = todo.done ? chalk.green('done'): chalk.red('not done')
-      table.push([i, todo.task, status])
+      table.push([ i, todo.task, todo.done ])
+      
     }
-    this.log(table.toString())
+    this.log(tables.toString())
   }
 }
