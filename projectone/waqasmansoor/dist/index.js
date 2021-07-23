@@ -4,9 +4,9 @@ const item_1 = require("./item");
 const inquirer = require("inquirer");
 const jsonTodoCollection_1 = require("./jsonTodoCollection");
 let todos = [new item_1.item(1, "Buy Flower"), new item_1.item(2, "Get Shoes"),
-    new item_1.item(3, "Collect Tickets", true)];
+    new item_1.item(3, "Collect Tickets", true), new item_1.item(4, "Call Joe")];
 let myCollection = new jsonTodoCollection_1.JsonTodoCollection("Waqas", todos);
-myCollection.addTodo("Call Joe");
+// myCollection.addTodo("Call Joe")
 let showCompleted = true;
 function displayTodoList() {
     console.log(`Todo List (${myCollection.getItemCount().incomplete} things to Complete)`);

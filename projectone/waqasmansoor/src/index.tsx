@@ -5,9 +5,9 @@ import {JsonTodoCollection} from './jsonTodoCollection'
 
 
 let todos:item[]=[new item(1,"Buy Flower"),new item(2,"Get Shoes"),
-new item(3,"Collect Tickets",true)]
+new item(3,"Collect Tickets",true),new item(4,"Call Joe")]
 let myCollection:collection=new JsonTodoCollection("Waqas",todos)
-myCollection.addTodo("Call Joe")
+// myCollection.addTodo("Call Joe")
 
 let showCompleted=true
 function displayTodoList():void{
