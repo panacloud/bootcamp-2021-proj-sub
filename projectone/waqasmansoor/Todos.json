@@ -1,0 +1,39 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Buy Flower",
+      "task_completion": false
+    },
+    {
+      "id": 2,
+      "name": "Get Shoes",
+      "task_completion": false
+    },
+    {
+      "id": 3,
+      "name": "Collect Tickets",
+      "task_completion": true
+    },
+    {
+      "id": 4,
+      "name": "Call Joe",
+      "task_completion": false
+    },
+    {
+      "id": 5,
+      "name": "Go to Duty",
+      "task_completion": false
+    },
+    {
+      "id": 6,
+      "name": "Take Breakfast",
+      "task_completion": false
+    },
+    {
+      "id": 7,
+      "name": "Call Joe",
+      "task_completion": false
+    }
+  ]
+}
