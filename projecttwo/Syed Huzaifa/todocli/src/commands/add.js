@@ -15,3 +15,9 @@ class AddCommand extends Command {
         this.log(res)
     }
 }
+
+AddCommand.flags = {
+    task: flags.string({char: 'n', description: 'task'}),
+}
+
+module.exports = AddCommand
