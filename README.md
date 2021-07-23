@@ -1,1 +1,1 @@
-# bootcamp-2021-proj-sub
+# bootcamp-2021-project-sub
