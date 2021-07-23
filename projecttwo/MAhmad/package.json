@@ -2,11 +2,11 @@
   "name": "todocli",
   "description": "a simple todocli",
   "version": "1.0.0",
-  "author": "ahmad",
+  "author": "Mahmedabid @Mahmedabid",
   "bin": {
-    "checkme": "./bin/run"
+    "todocli": "./bin/run"
   },
-  "bugs": "https://github.com/Mahmedabid/bootcamp-2021-proj-sub/issues",
+  "bugs": "https://github.com/Mahmedabid/bootcamp-2021-proj-sub/tree/MAhmad/projecttwo/MAhmad/issues",
   "devDependencies": {
     "@oclif/dev-cli": "^1.26.0",
     "@oclif/test": "^1.2.8",
@@ -33,7 +33,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/Mahmedabid/bootcamp-2021-proj-sub",
+  "homepage": "https://github.com/Mahmedabid/bootcamp-2021-proj-sub/tree/MAhmad/projecttwo/MAhmad",
   "keywords": [
     "oclif"
   ],
@@ -41,12 +41,12 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "checkme",
+    "bin": "todocli",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "Mahmedabid/bootcamp-2021-proj-sub",
+  "repository": "Mahmedabid/bootcamp-2021-proj-sub/tree/MAhmad/projecttwo/MAhmad",
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
