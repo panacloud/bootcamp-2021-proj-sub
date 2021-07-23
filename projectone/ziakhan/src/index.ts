@@ -7,7 +7,7 @@ list.addTodo("Buy Mango");
 list.addTodo("Buy Meat");
 list.addTodo("Get Haircut");
 
-list.taskDone(2);
+list.taskDone(1);
 
 list.printAll();
 
