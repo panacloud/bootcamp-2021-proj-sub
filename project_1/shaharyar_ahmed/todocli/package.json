@@ -1,7 +1,7 @@
 {
-  "name": "todocli",
+  "name": "@shaharyarahmed/tdcli",
   "description": "A command line todo app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Shaharyar Ahmed @ShaharyarAhmed-bot",
   "bin": {
     "todocli": "./bin/run"
@@ -12,7 +12,7 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
     "chalk": "^2.4.2",
-    "lowdb": "^1.0.0",
+    "node-json-db": "^1.3.0",
     "tslib": "^1"
   },
   "devDependencies": {
