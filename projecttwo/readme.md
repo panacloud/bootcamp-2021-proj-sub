@@ -50,6 +50,30 @@ bin/run add "New todo Item"        //COmmand line
 
 import chalk from 'chalk'
 
+Inspected working. All working fine.
+
+Step 5:
+
+Added a bunch of more commands. (All detailed in the readme.md file in the CLI folder.)
+Tested them. All working fine except for one operation:
+
+$ ashhtodo show
+
+The command is supposed to list down the tasks. However, it gives and error of:
+
+TypeError: todoAPI_1.default.show is not a function
+
+Googled alot, asked alot, coudln't find a workable solution.
+Any help in this regards will be invaluable.
+
+Step 6:
+
+publushed as a global CLI package. Initially, there were some problems using it locally after installing. But it was resolved. 
+Now working fine. Command line for installation is:
+
+$ npm install ashhtodo -g
+
+
 
 
 
