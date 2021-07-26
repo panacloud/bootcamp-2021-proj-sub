@@ -1,5 +1,6 @@
 import { TodoItem } from "./todoItem";
 import { TodoCollection } from "./todoCollection";
+import * as inquirer from 'inquirer';
 
 let todos :TodoItem[] = [
     new TodoItem(1,"Buy Flowers"),
@@ -9,14 +10,34 @@ let todos :TodoItem[] = [
 ]
 
 let collection : TodoCollection = new TodoCollection("Haris",todos)
+let showCompleted = true;
 
-console.clear();
-console.log(`${collection.userName}'s Todo List`
+function displayTodoList(): void{
+    console.log(`${collection.userName}'s Todo List`
     +`(${collection.getItemCounts().incomplete} items to do)`);
+    collection.getTodoItems(showCompleted).forEach(item => item.printDetails());
 
-// let newId:number  = collection.addTodo("Go for run");
-// let todoItem: TodoItem = collection.getTodoById(newId);
+}
+enum Commands{
+    Toogle = "Show/Hide Completed",
+    Quit = 'Quit'
+}
 
-// collection.removeComplete();
-
-collection.getTodoItems(true).forEach(item => item.printDetails());
+function promptUser() :void {
+    console.clear();
+    displayTodoList();
+    inquirer.prompt({
+        type : 'list',
+        name : 'command',
+        message : 'Choose option',
+        choices: Object.values(Commands),
+    }).then( answer =>{
+        switch(answer["command"]){
+            case Commands.Toogle:
+                showCompleted = !showCompleted;
+                promptUser();
+                break
+        }
+    })
+}
+promptUser();
