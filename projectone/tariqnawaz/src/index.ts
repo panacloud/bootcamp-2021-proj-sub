@@ -1,7 +1,9 @@
 import { TodoItem } from "./todoItem";
 import { TodoCollection } from "./todoCollection";
-import * as inquirer from 'inquirer';
+import * as inquirer from 'inquirer';  // for details of inquirer fo to readme.md
 import { JsonTodoCollection } from "./jsonTodoCollection";
+       
+        
 
 let todos: TodoItem[] = [
     new TodoItem(1, "Get sweet"), new TodoItem(2, "Pick Up the Car"),
@@ -17,6 +19,7 @@ function displayTodoList(): void {
     collection.getTodoItems(showCompleted).forEach(item => item.printDetails());
 }
 enum Commands {
+        // The enum keyword is a TypeScript feature that allows values to be given names formore details go to readme.md file
     Add = "Add New Task",
     Complete = "Complete Task",
     Toggle = "Show/Hide Completed",
@@ -25,7 +28,8 @@ enum Commands {
 }
 function promptAdd(): void {
     console.clear();
-    inquirer.prompt({ type: "input", name: "add", message: "Enter task:" })
+    inquirer.prompt({ 
+        type: "input", name: "add", message: "Enter task:" })
         .then(answers => {
             if (answers["add"] !== "") {
                 collection.addTodo(answers["add"]);
@@ -37,6 +41,8 @@ function promptAdd(): void {
 function promptComplete(): void {
     console.clear();
     inquirer.prompt({
+        // The inquirer.prompt method is used to prompt the user for a response and is configured using a JavaScript object. formore details go to inquirer.prompt in readme.md file
+
         type: "checkbox", name: "complete",
         message: "Mark Tasks Complete",
         choices: collection.getTodoItems(showCompleted).map(item =>
