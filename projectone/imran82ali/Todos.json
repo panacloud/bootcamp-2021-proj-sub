@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Buy Afghani Tikka",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "task": "Buy Coffee",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "task": "Zia Khan",
+      "complete": false
+    }
+  ]
+}
