@@ -21,7 +21,7 @@ $ checkme add
 
   async run() {
     const {args, flags} = this.parse(Add)
-    const todo   = args.todo
+    const todo = args.todo
     if (todo) {
       if (flags.done) {
         todoAPI.add(todo, true)

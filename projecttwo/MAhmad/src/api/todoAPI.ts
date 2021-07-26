@@ -32,6 +32,16 @@ class TodoAPI {
     this.saveTodos()
   }
 
+  removeAll () {
+    this.todos = []
+    this.saveTodos()
+  }
+
+  removeDone () {
+    this.todos = this.todos.filter(todo => !todo.done) 
+    this.saveTodos()
+  }
+
   list () {
     return this.todos
   }

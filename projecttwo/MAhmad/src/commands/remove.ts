@@ -1,4 +1,4 @@
-import { Command } from '@oclif/command'
+import { Command, flags } from '@oclif/command'
 import chalk from 'chalk'
 import todoAPI from '../api/todoAPI'
 
@@ -6,6 +6,11 @@ export default class Remove extends Command {
   static description = 'Remove a todo from list'
 
   static args = [{ name: 'index' }]
+
+  static flags = {
+    done: flags.boolean({ char: 'd', description: 'remove done todos' }),
+    all: flags.boolean({ char: 'a', description: 'remove all todos' })
+  }
 
   static examples = [`
 $ checkme remove 0
@@ -16,7 +21,7 @@ $ checkme remove
 `]
 
   async run() {
-    const { args } = this.parse(Remove)
+    const { args, flags } = this.parse(Remove)
 
     const index = args.index
     if (index) {
@@ -28,7 +33,13 @@ $ checkme remove
         this.log(`${chalk.red('[Error]')} ${chalk.redBright('Index out of range')}`)
       }
     } else {
-      this.error(chalk.red('please specify the todo\'s index'))
+      switch (true) {
+        case flags.done:
+          todoAPI.removeDone()
+          break;
+        case flags.all:
+          todoAPI.removeAll()
+      }
     }
   }
 }
