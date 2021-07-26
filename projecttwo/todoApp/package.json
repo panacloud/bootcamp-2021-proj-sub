@@ -1,0 +1,21 @@
+{
+  "name": "@sana_jamil/todoapp",
+  "version": "1.0.0",
+  "description": "bootcamp TodoApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sana Jamil",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.4.2",
+    "inquirer": "^7.3.3",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^7.3.3",
+    "@types/lowdb": "^1.0.11"
+  }
+}
