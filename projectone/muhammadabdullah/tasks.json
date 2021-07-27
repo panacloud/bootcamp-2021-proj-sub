@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "complete": true,
+      "id": 1,
+      "task": "Learn git"
+    },
+    {
+      "complete": true,
+      "id": 2,
+      "task": "Learn React"
+    },
+    {
+      "complete": true,
+      "id": 3,
+      "task": "Learn Django"
+    },
+    {
+      "complete": false,
+      "id": 4,
+      "task": "Learn GQL"
+    },
+    {
+      "complete": false,
+      "id": 5,
+      "task": "Learn AWS"
+    },
+    {
+      "complete": false,
+      "id": 6,
+      "task": "Become a uniqorn"
+    }
+  ]
+}
