@@ -6,15 +6,6 @@ const todoPath = path.join(os.homedir(), 'todocli');
 const todoFile = path.join(todoPath, 'todos.json');
 
 if (!fs.existsSync(todoFile)) {
-  // fs.mkdir(todoPath, (err) => {
-  //   if (err) {
-  //     console.log(err);
-  //     }
-  // })
-  // fs.open(todoFile, 'w', function (err, file) {
-  //   if (err) throw err;
-  //   console.log('Saved!');
-  // });
   fs.mkdirSync(todoPath);
   fs.writeFileSync(todoFile, '[]');
 }
