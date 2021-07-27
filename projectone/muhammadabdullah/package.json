@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/lowdb": "^1.0.11",
+    "inquirer": "^8.1.2",
+    "types": "^0.1.1"
+  }
 }
