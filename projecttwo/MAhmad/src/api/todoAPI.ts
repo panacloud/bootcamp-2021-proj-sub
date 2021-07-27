@@ -1,7 +1,23 @@
 import * as fs from 'fs'
 import * as path from 'path'
+import * as os from 'os';
 
-const todoFile = path.join(__dirname, '../db/todos.json');
+const todoPath = path.join(os.homedir(), 'todocli');
+const todoFile = path.join(todoPath, 'todos.json');
+
+if (!fs.existsSync(todoFile)) {
+  // fs.mkdir(todoPath, (err) => {
+  //   if (err) {
+  //     console.log(err);
+  //     }
+  // })
+  // fs.open(todoFile, 'w', function (err, file) {
+  //   if (err) throw err;
+  //   console.log('Saved!');
+  // });
+  fs.mkdirSync(todoPath);
+  fs.writeFileSync(todoFile, '[]');
+}
 
 interface Todo {
   done: boolean;
@@ -18,6 +34,10 @@ class TodoAPI {
   private saveTodos () {
     const data = JSON.stringify(this.todos)
     fs.writeFileSync(todoFile, data, { encoding: 'utf-8' })
+  }
+
+  showdb () {
+    console.log(todoFile);
   }
 
   add (todo : string, done? : boolean) {
@@ -38,7 +58,7 @@ class TodoAPI {
   }
 
   removeDone () {
-    this.todos = this.todos.filter(todo => !todo.done) 
+    this.todos = this.todos.filter(todo => !todo.done)
     this.saveTodos()
   }
 

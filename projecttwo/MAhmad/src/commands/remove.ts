@@ -32,7 +32,10 @@ $ checkme remove
       } catch (error) {
         this.log(`${chalk.red('[Error]')} ${chalk.redBright('Index out of range')}`)
       }
-    } else {
+    } else if (!index && !flags.all && !flags.done) {
+      console.log(chalk.redBright('[Error]: Please specify the todo\'s index'));
+    }
+    else if (flags.all || flags.done) {
       switch (true) {
         case flags.done:
           todoAPI.removeDone()

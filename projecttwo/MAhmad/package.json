@@ -1,10 +1,10 @@
 {
   "name": "ahm-todocli",
   "description": "a simple todocli",
-  "version": "2.0.0",
+  "version": "2.0.4",
   "author": "Mahmedabid @Mahmedabid",
   "bin": {
-    "todocli": "./bin/run"
+    "ahm-todocli": "./bin/run"
   },
   "bugs": "https://github.com/Mahmedabid/bootcamp-2021-proj-sub/tree/MAhmad/projecttwo/MAhmad/issues",
   "devDependencies": {
