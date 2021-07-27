@@ -20,8 +20,8 @@ class TodoCollection {
     getTodoById(id) {
         return this.itemMap.get(id);
     }
-    getTodoItems(inculdeComplete) {
-        return [...this.itemMap.values()].filter(item => inculdeComplete || !item.complete);
+    getTodoItems(includeComplete) {
+        return [...this.itemMap.values()].filter(item => includeComplete || !item.complete);
     }
     markComplete(id, complete) {
         const todoItem = this.getTodoById(id);

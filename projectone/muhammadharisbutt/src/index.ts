@@ -1,16 +1,18 @@
 import { TodoItem } from "./todoItem";
 import { TodoCollection } from "./todoCollection";
 import * as inquirer from 'inquirer';
+import { JsonTodoCollection } from "./jsonTodoCollection";
 
 let todos :TodoItem[] = [
-    new TodoItem(1,"Buy Flowers"),
-    new TodoItem(2,"Get Shoes"),
-    new TodoItem(3,"COllect Tickets"),
-    new TodoItem(4,"Call Joe",true),
+    new TodoItem(1,"Read Deep learning with Python"),
+    new TodoItem(2,"Do some data structure concepts"),
+    new TodoItem(3,"Do some django "),
+    new TodoItem(4,"Watch bootcamp2021",true),
 ]
 
-let collection : TodoCollection = new TodoCollection("Haris",todos)
+let collection: TodoCollection = new JsonTodoCollection("Haris", todos);
 let showCompleted = true;
+
 
 function displayTodoList(): void{
     console.log(`${collection.userName}'s Todo List`

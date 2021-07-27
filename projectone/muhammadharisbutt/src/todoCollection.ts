@@ -6,7 +6,7 @@ type ItemCounts = {
 }
 export class TodoCollection {
     private nextId: number = 1;
-    private itemMap = new Map<number,TodoItem>();
+    protected itemMap = new Map<number,TodoItem>();
 
     constructor(public userName: string, public todoItems: TodoItem[] = []){ 
         todoItems.forEach(item=> this.itemMap.set(item.id,item))
@@ -24,8 +24,8 @@ export class TodoCollection {
         return this.itemMap.get(id);
     }
 
-    getTodoItems(inculdeComplete: boolean) : TodoItem[]{
-        return [...this.itemMap.values()].filter(item=> inculdeComplete || !item.complete)
+    getTodoItems(includeComplete: boolean) : TodoItem[]{
+        return [...this.itemMap.values()].filter(item=> includeComplete || !item.complete)
 
     }
 
