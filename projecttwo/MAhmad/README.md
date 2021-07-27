@@ -19,7 +19,7 @@ $ npm install -g ahm-todocli
 $ todocli COMMAND
 running command...
 $ todocli (-v|--version|version)
-ahm-todocli/2.0.4 win32-x64 node-v16.1.0
+ahm-todocli/2.0.5 win32-x64 node-v16.1.0
 $ todocli --help [COMMAND]
 USAGE
   $ todocli COMMAND
@@ -56,7 +56,7 @@ EXAMPLES
   ›   Error: please specify the new todo
 ```
 
-_See code: [src/commands/add.ts](https://github.com/Mahmedabid/bootcamp-2021-proj-sub/blob/v2.0.4/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/Mahmedabid/bootcamp-2021-proj-sub/blob/v2.0.5/src/commands/add.ts)_
 
 ## `todocli help [COMMAND]`
 
@@ -88,7 +88,7 @@ OPTIONS
   -n, --notDone  show not done todos
 ```
 
-_See code: [src/commands/list.ts](https://github.com/Mahmedabid/bootcamp-2021-proj-sub/blob/v2.0.4/src/commands/list.ts)_
+_See code: [src/commands/list.ts](https://github.com/Mahmedabid/bootcamp-2021-proj-sub/blob/v2.0.5/src/commands/list.ts)_
 
 ## `todocli remove [INDEX]`
 
@@ -112,7 +112,7 @@ EXAMPLES
   ›   Error: please specify the todo's index
 ```
 
-_See code: [src/commands/remove.ts](https://github.com/Mahmedabid/bootcamp-2021-proj-sub/blob/v2.0.4/src/commands/remove.ts)_
+_See code: [src/commands/remove.ts](https://github.com/Mahmedabid/bootcamp-2021-proj-sub/blob/v2.0.5/src/commands/remove.ts)_
 
 ## `todocli showdb`
 
@@ -123,7 +123,7 @@ USAGE
   $ todocli showdb
 ```
 
-_See code: [src/commands/showdb.ts](https://github.com/Mahmedabid/bootcamp-2021-proj-sub/blob/v2.0.4/src/commands/showdb.ts)_
+_See code: [src/commands/showdb.ts](https://github.com/Mahmedabid/bootcamp-2021-proj-sub/blob/v2.0.5/src/commands/showdb.ts)_
 
 ## `todocli status`
 
@@ -134,5 +134,5 @@ USAGE
   $ todocli status
 ```
 
-_See code: [src/commands/status.ts](https://github.com/Mahmedabid/bootcamp-2021-proj-sub/blob/v2.0.4/src/commands/status.ts)_
+_See code: [src/commands/status.ts](https://github.com/Mahmedabid/bootcamp-2021-proj-sub/blob/v2.0.5/src/commands/status.ts)_
 <!-- commandsstop -->
