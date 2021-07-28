@@ -1,19 +1,19 @@
 {
   "name": "zubairalighafoor",
   "version": "1.0.0",
-  "description": "Project One of typescript todo app by zubair",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/panacloud/bootcamp-2021-proj-sub.git"
+    "url": "git+https://github.com/zubairalighafoor/bootcamp-2021-proj-sub.git"
   },
   "author": "Zubair Ali Ghafoor",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/panacloud/bootcamp-2021-proj-sub/issues"
+    "url": "https://github.com/zubairalighafoor/bootcamp-2021-proj-sub/issues"
   },
-  "homepage": "https://github.com/panacloud/bootcamp-2021-proj-sub#readme"
+  "homepage": "https://github.com/zubairalighafoor/bootcamp-2021-proj-sub#readme"
 }
