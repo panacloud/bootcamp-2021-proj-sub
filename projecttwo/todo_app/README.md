@@ -30,6 +30,7 @@ USAGE
 <!-- commands -->
 * [`checkme hello [FILE]`](#checkme-hello-file)
 * [`checkme help [COMMAND]`](#checkme-help-command)
+* [`checkme list [FILE]`](#checkme-list-file)
 
 ## `checkme hello [FILE]`
 
@@ -46,7 +47,7 @@ OPTIONS
 
 EXAMPLE
   $ checkme hello
-  hello world from ./src/hello.ts!
+  hello world from ./src/hello.ts!!!!!!!
 ```
 
 _See code: [src/commands/hello.ts](https://github.com/Sultan336/checkme/blob/v1.0.0/src/commands/hello.ts)_
@@ -67,4 +68,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `checkme list [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ checkme list [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/list.ts](https://github.com/Sultan336/checkme/blob/v1.0.0/src/commands/list.ts)_
 <!-- commandsstop -->

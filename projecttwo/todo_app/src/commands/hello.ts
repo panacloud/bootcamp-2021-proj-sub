@@ -5,7 +5,7 @@ export default class Hello extends Command {
 
   static examples = [
     `$ checkme hello
-hello world from ./src/hello.ts!
+hello world from ./src/hello.ts!!!!!!!
 `,
   ]
 
