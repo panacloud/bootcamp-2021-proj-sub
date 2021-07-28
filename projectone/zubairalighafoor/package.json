@@ -1,0 +1,26 @@
+{
+  "name": "zubairalighafoor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zubairalighafoor/bootcamp-2021-proj-sub.git"
+  },
+  "author": "Zubair Ali Ghafoor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zubairalighafoor/bootcamp-2021-proj-sub/issues"
+  },
+  "homepage": "https://github.com/zubairalighafoor/bootcamp-2021-proj-sub#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/lowdb": "^1.0.11"
+  }
+}
