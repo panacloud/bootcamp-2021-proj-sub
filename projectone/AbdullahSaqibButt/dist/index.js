@@ -3,33 +3,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Item_1 = require("./Item");
 const inquirer = require("inquirer");
 const jsonTodoCollection_1 = require("./jsonTodoCollection");
-// icollect.AddTodo("");
-// icollect.AddTodo("");
-// icollect.AddTodo("");
-// icollect.AddTodo("");
-// icollect.AddTodo("Take Rest");
-// icollect.AddTodo("Eat Dinner");
-// icollect.AddTodo("Go to Sleep");
 let todos = [
     new Item_1.Item(1, "Eat Breakfast"), new Item_1.Item(2, "Go to School")
 ];
-//let collection : ItemCollection = new ItemCollection (todos);
 let collection = new jsonTodoCollection_1.JsonTodoCollection("Abdullah Saqib", todos);
-// collection.Taskcomplete(2,true);
-// collection.Taskcomplete(4,true);
-// icollect.Taskcomplete(6,true);
 let showcompleted = true;
-//console.log("All Tasks are as follows :");
-//icollect.getTodoItems(true).forEach(item => item.PrintDetails());
-// console.log("\n The Completed Tasks are : ");
-// icollect.listofcompletedtasks();
-// icollect.removecompletedtasks();
-// console.log(`Incomplete tasks are : ${icollect.getItemCounts().incomplete}`);
 function displaytodoList() {
     console.log(`My Todo List  has`
         + `(${collection.getItemCounts().total} items to do)`);
     collection.getTodoItems(showcompleted).forEach(item => item.PrintDetails());
-    //icollect.getTodoItems(showcompleted).forEach(items => items.PrintDetails());
 }
 function AddPrompt() {
     console.clear();
