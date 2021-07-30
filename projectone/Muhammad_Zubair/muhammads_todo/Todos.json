@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Pray Fajar",
+      "complete": true
+    },
+    {
+      "id": 2,
+      "task": "Do ziker",
+      "complete": true
+    },
+    {
+      "id": 3,
+      "task": "Recite Holy Quran",
+      "complete": true
+    },
+    {
+      "id": 4,
+      "task": "Do Breakfast",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "task": "go back to home",
+      "complete": false
+    }
+  ]
+}
