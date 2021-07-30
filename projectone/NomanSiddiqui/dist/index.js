@@ -1,17 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const todoItem_1 = require("./todoItem");
-const todoCollection_1 = require("./todoCollection");
 const inquirer = require("inquirer");
-// import {JsonTodoCollection} from "./jsonTodoCollection";
+const jsonCollection_1 = require("./jsonCollection");
 let todos = [
-    new todoItem_1.TodoItem(1, "Buy Flowers"),
+    new todoItem_1.TodoItem(1, "Buy Grocery"),
     new todoItem_1.TodoItem(2, "Get Shoes"),
     new todoItem_1.TodoItem(3, "Collect Tickets"),
-    new todoItem_1.TodoItem(4, "Call Joe", true)
+    new todoItem_1.TodoItem(4, "Call Friend", true)
 ];
-let collection = new todoCollection_1.TodoCollection("Ns", todos);
-// let collection:TodoCollection = new JsonTodoCollection("NS",todos);
+// let collection = new TodoCollection("NS", todos);
+let collection = new jsonCollection_1.JsonTodoCollection("NS", todos);
 let showCompleted = true;
 function displayTodoList() {
     console.log(`${collection.userName}'s Todo List`
@@ -39,21 +38,6 @@ function promptAdd() {
         promptUser();
     });
 }
-// function promptComplete(): void {
-//     console.clear();
-//     inquirer.prompt({
-//         type: "checkbox", name: "complete",
-//         message: "Mark Tasks Complete",
-//         choices: collection.getTodoItems(showCompleted).map(item =>
-//             ({ name: item.task, value: item.id, checked: item.complete }))
-//     }).then(answers => {
-//         let completedTasks = answers["complete"] as number[];
-//         collection.getTodoItems(true).forEach(item =>
-//             collection.markComplete(item.id,
-//                 completedTasks.find(id => id === item.id) != undefined));
-//         promptUser();
-//     })
-// }
 function promptComplete() {
     console.clear();
     inquirer.prompt({
@@ -106,13 +90,3 @@ function promptUser() {
     });
 }
 promptUser();
-// console.clear();
-// console.log(`${collection.userName} Todo List` 
-//             + `(${collection.getItemCounts().incomplete} items to do)`);
-// let newId = collection.addTodo("Go for run");
-// let todoItem = collection.getTodoById(newId);
-// todoItem.printDetails();
-// collection.addTodo(todoItem);
-// collection.removeComplete();
-// collection.getTodoItems(true).forEach(item => item.printDetails());
-// console.log(JSON.stringify(todoItem));

@@ -1,7 +1,7 @@
 import { TodoItem } from "./todoItem";
 import { TodoCollection } from "./todoCollection";
 import * as inquirer from 'inquirer';
-// import {JsonTodoCollection} from "./jsonTodoCollection";
+import {JsonTodoCollection} from "./jsonCollection";
 
 let todos = [
     new TodoItem(1, "Buy Grocery"),
@@ -10,8 +10,8 @@ let todos = [
     new TodoItem(4, "Call Friend", true)
 ];
 
-let collection = new TodoCollection("NS", todos);
-// let collection:TodoCollection = new JsonTodoCollection("NS",todos);
+// let collection = new TodoCollection("NS", todos);
+let collection:TodoCollection = new JsonTodoCollection("NS",todos);
 let showCompleted = true;
 
 function displayTodoList(): void {
@@ -100,19 +100,3 @@ function promptUser(): void {
 
 promptUser();
 
-
-// console.clear();
-// console.log(`${collection.userName} Todo List` 
-//             + `(${collection.getItemCounts().incomplete} items to do)`);
-
-
-
-// let newId = collection.addTodo("Go for run");
-// let todoItem = collection.getTodoById(newId);
-// todoItem.printDetails();
-
-// collection.addTodo(todoItem);
-// collection.removeComplete();
-// collection.getTodoItems(true).forEach(item => item.printDetails());
-
-// console.log(JSON.stringify(todoItem));
