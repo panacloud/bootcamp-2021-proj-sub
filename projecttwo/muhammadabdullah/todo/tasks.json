@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "complete": false,
+      "id": 1,
+      "task": "Learn git"
+    },
+    {
+      "complete": false,
+      "id": 2,
+      "task": "Learn oclif"
+    },
+    {
+      "complete": false,
+      "id": 3,
+      "task": "Learn React"
+    },
+    {
+      "complete": false,
+      "id": 4,
+      "task": "Practice Archry"
+    }
+  ]
+}
