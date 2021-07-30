@@ -12,9 +12,9 @@ export default class Add extends Command {
 
     const todo = args.todo;
     if (todo) {
-      this.log(`[Success] New todo added: ${todo}`);
+      this.log(`${chalk.green("[Success]")} New todo added: ${todo}`);
     } else {
-      this.error("Please specify a new todo");
+      this.error(chalk.red("Please specify a new todo"));
     }
   }
 }
