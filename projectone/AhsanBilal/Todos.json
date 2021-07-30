@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "go for run",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "task": "eat fruits",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "task": "eat some healthy drinks",
+      "complete": true
+    },
+    {
+      "id": 4,
+      "task": "8 hours sleep",
+      "complete": true
+    }
+  ]
+}
