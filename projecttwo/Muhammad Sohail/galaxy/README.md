@@ -30,22 +30,18 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`galaxy add [FILE]`](#galaxy-add-file)
+* [`galaxy add [TODO]`](#galaxy-add-todo)
 * [`galaxy hello [FILE]`](#galaxy-hello-file)
 * [`galaxy help [COMMAND]`](#galaxy-help-command)
+* [`galaxy list [FILE]`](#galaxy-list-file)
 
-## `galaxy add [FILE]`
+## `galaxy add [TODO]`
 
-describe the command here
+Add new todo to list
 
 ```
 USAGE
-  $ galaxy add [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ galaxy add [TODO]
 ```
 
 _See code: [src/commands/add.ts](https://github.com/MuhammadSohail92/galaxy/blob/v1.0.0/src/commands/add.ts)_
@@ -86,4 +82,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `galaxy list [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ galaxy list [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/list.ts](https://github.com/MuhammadSohail92/galaxy/blob/v1.0.0/src/commands/list.ts)_
 <!-- commandsstop -->
