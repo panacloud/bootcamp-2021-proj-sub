@@ -22,7 +22,7 @@ $ npm install -g abdullah-cli
 $ abdullah-cli COMMAND
 running command...
 $ abdullah-cli (-v|--version|version)
-abdullah-cli/0.0.0 win32-x64 node-v16.4.2
+abdullah-cli/1.0.0 win32-x64 node-v16.4.2
 $ abdullah-cli --help [COMMAND]
 USAGE
   $ abdullah-cli COMMAND
@@ -52,7 +52,7 @@ USAGE
 
 ## `abdullah-cli add [TODO]`
 
-Add a new todo
+add a new todo
 
 ```
 USAGE
@@ -62,7 +62,7 @@ OPTIONS
   -d, --done
 ```
 
-_See code: [src/commands/add.ts](https://github.com/shy-tan/abdullah-cli/blob/v0.0.0/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/shy-tan/abdullah-cli/blob/v1.0.0/src/commands/add.ts)_
 
 ## `abdullah-cli hello [FILE]`
 
@@ -82,7 +82,7 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/shy-tan/abdullah-cli/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/hello.ts](https://github.com/shy-tan/abdullah-cli/blob/v1.0.0/src/commands/hello.ts)_
 
 ## `abdullah-cli help [COMMAND]`
 
@@ -103,41 +103,36 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2
 
 ## `abdullah-cli interact [FILE]`
 
-describe the command here
+interactive mode
 
 ```
 USAGE
   $ abdullah-cli interact [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
 ```
 
-_See code: [src/commands/interact.ts](https://github.com/shy-tan/abdullah-cli/blob/v0.0.0/src/commands/interact.ts)_
+_See code: [src/commands/interact.ts](https://github.com/shy-tan/abdullah-cli/blob/v1.0.0/src/commands/interact.ts)_
 
 ## `abdullah-cli list`
 
-Show all todos
+show all todos
 
 ```
 USAGE
   $ abdullah-cli list
 ```
 
-_See code: [src/commands/list.ts](https://github.com/shy-tan/abdullah-cli/blob/v0.0.0/src/commands/list.ts)_
+_See code: [src/commands/list.ts](https://github.com/shy-tan/abdullah-cli/blob/v1.0.0/src/commands/list.ts)_
 
 ## `abdullah-cli remove [INDEX]`
 
-Remove a todo
+remove a todo
 
 ```
 USAGE
   $ abdullah-cli remove [INDEX]
 ```
 
-_See code: [src/commands/remove.ts](https://github.com/shy-tan/abdullah-cli/blob/v0.0.0/src/commands/remove.ts)_
+_See code: [src/commands/remove.ts](https://github.com/shy-tan/abdullah-cli/blob/v1.0.0/src/commands/remove.ts)_
 <!-- commandsstop -->
 * [`abdullah-cli add [FILE]`](#abdullah-cli-add-file)
 * [`abdullah-cli hello [FILE]`](#abdullah-cli-hello-file)

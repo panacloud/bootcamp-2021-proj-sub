@@ -1,7 +1,7 @@
 {
   "name": "abdullah-cli",
   "description": "A Todo CLI App made with oclif and TypeScript for BootCamp 2021",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Abdullah Bin Tahir @shy-tan",
   "bin": {
     "abdullah-cli": "./bin/run"
