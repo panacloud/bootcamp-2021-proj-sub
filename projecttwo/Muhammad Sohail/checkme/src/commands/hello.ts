@@ -1,7 +1,13 @@
 import {Command, flags} from '@oclif/command'
 
-export default class Todo extends Command {
+export default class Hello extends Command {
   static description = 'describe the command here'
+
+  static examples = [
+    `$ checkme hello
+hello world from ./src/hello.ts!
+`,
+  ]
 
   static flags = {
     help: flags.help({char: 'h'}),
@@ -14,10 +20,10 @@ export default class Todo extends Command {
   static args = [{name: 'file'}]
 
   async run() {
-    const {args, flags} = this.parse(Todo)
+    const {args, flags} = this.parse(Hello)
 
     const name = flags.name ?? 'world'
-    this.log(`hello ${name} from D:\\BootCamp2021\\EnglishProject\\bootcamp-2021-proj-sub\\projecttwo\\Muhammad Sohail\\todoAppWithOclif\\src\\commands\\todo.ts`)
+    this.log(`hello ${name} from .\\src\\commands\\hello.ts`)
     if (args.file && flags.force) {
       this.log(`you input --force and --file: ${args.file}`)
     }

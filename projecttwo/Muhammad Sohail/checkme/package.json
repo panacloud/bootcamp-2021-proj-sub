@@ -1,12 +1,11 @@
 {
-  "name": "todoAppWithOclif",
-  "description": "todoapplication with oclif",
+  "name": "checkme",
   "version": "0.0.0",
   "author": "Muhammad Sohail @MSohail731",
   "bin": {
-    "todoAppWithOclif": "./bin/run"
+    "checkme": "./bin/run"
   },
-  "bugs": "https://github.com/MSohail731/todoAppWithOclif/issues",
+  "bugs": "https://github.com/MSohail731/checkme/issues",
   "devDependencies": {
     "@oclif/dev-cli": "^1.26.0",
     "@oclif/test": "^1.2.8",
@@ -33,7 +32,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/MSohail731/todoAppWithOclif",
+  "homepage": "https://github.com/MSohail731/checkme",
   "keywords": [
     "oclif"
   ],
@@ -41,12 +40,12 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "todoAppWithOclif",
+    "bin": "checkme",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "MSohail731/todoAppWithOclif",
+  "repository": "MSohail731/checkme",
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
