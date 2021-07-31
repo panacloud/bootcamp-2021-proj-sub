@@ -1,0 +1,21 @@
+{
+  "name": "todoapp-bootcamp",
+  "version": "1.0.3",
+  "description": "Published todoapp as a practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Talha Bin Salman",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.4.7",
+    "inquirer": "^7.3.3",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^7.3.3",
+    "@types/lowdb": "^1.0.11"
+  }
+}

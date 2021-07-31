@@ -1,0 +1,17 @@
+{
+  "name": "todoapp-bootcamp-urdu",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./lib/dist/index.js",
+  "bin": {
+    "todoapp-cli": "./bin/todoapp.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

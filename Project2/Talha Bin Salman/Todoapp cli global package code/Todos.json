@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Complete AI project",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "task": "Complete Todoapp",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "task": "Publish code on npm",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "task": "Take Rest",
+      "complete": true
+    }
+  ]
+}
