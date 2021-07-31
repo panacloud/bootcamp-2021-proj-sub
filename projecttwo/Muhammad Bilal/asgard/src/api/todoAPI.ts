@@ -25,8 +25,9 @@ class TodoAPI {
     fs.writeFileSync(todoFile, data, { encoding: 'utf-8' })
   }
 
-  add (todo : string) {
-    const newTodo : Todo = { done: false, todo }
+  add (todo : string, done? : boolean) {
+    done = done || false
+    const newTodo : Todo = { done, todo }
     this.todos.push(newTodo)
     this.saveTodos()
   }
