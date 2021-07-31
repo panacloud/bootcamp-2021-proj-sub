@@ -30,22 +30,18 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`asgard add [FILE]`](#asgard-add-file)
+* [`asgard add [TODO]`](#asgard-add-todo)
 * [`asgard hello [FILE]`](#asgard-hello-file)
 * [`asgard help [COMMAND]`](#asgard-help-command)
+* [`asgard list [FILE]`](#asgard-list-file)
 
-## `asgard add [FILE]`
+## `asgard add [TODO]`
 
-describe the command here
+Add new todo to list
 
 ```
 USAGE
-  $ asgard add [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ asgard add [TODO]
 ```
 
 _See code: [src/commands/add.ts](https://github.com/MuhammadBilal7x/asgard/blob/v1.0.0/src/commands/add.ts)_
@@ -86,4 +82,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `asgard list [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ asgard list [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/list.ts](https://github.com/MuhammadBilal7x/asgard/blob/v1.0.0/src/commands/list.ts)_
 <!-- commandsstop -->
