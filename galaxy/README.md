@@ -30,8 +30,25 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`galaxy add [FILE]`](#galaxy-add-file)
 * [`galaxy hello [FILE]`](#galaxy-hello-file)
 * [`galaxy help [COMMAND]`](#galaxy-help-command)
+
+## `galaxy add [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ galaxy add [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/add.ts](https://github.com/MuhammadSohail92/galaxy/blob/v1.0.0/src/commands/add.ts)_
 
 ## `galaxy hello [FILE]`
 
