@@ -33,8 +33,9 @@ USAGE
 * [`galaxy add [TODO]`](#galaxy-add-todo)
 * [`galaxy hello [FILE]`](#galaxy-hello-file)
 * [`galaxy help [COMMAND]`](#galaxy-help-command)
+* [`galaxy interact [FILE]`](#galaxy-interact-file)
 * [`galaxy list`](#galaxy-list)
-* [`galaxy remove [FILE]`](#galaxy-remove-file)
+* [`galaxy remove [INDEX]`](#galaxy-remove-index)
 
 ## `galaxy add [TODO]`
 
@@ -43,6 +44,9 @@ Add new todo to list
 ```
 USAGE
   $ galaxy add [TODO]
+
+OPTIONS
+  -d, --done
 ```
 
 _See code: [src/commands/add.ts](https://github.com/MuhammadSohail92/galaxy/blob/v1.0.0/src/commands/add.ts)_
@@ -84,6 +88,22 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
+## `galaxy interact [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ galaxy interact [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/interact.ts](https://github.com/MuhammadSohail92/galaxy/blob/v1.0.0/src/commands/interact.ts)_
+
 ## `galaxy list`
 
 Print out all todos
@@ -95,18 +115,13 @@ USAGE
 
 _See code: [src/commands/list.ts](https://github.com/MuhammadSohail92/galaxy/blob/v1.0.0/src/commands/list.ts)_
 
-## `galaxy remove [FILE]`
+## `galaxy remove [INDEX]`
 
-describe the command here
+Remove a todo from list
 
 ```
 USAGE
-  $ galaxy remove [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ galaxy remove [INDEX]
 ```
 
 _See code: [src/commands/remove.ts](https://github.com/MuhammadSohail92/galaxy/blob/v1.0.0/src/commands/remove.ts)_
