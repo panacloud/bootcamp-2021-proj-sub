@@ -38,11 +38,37 @@ class TodoAPI {
     fs.writeFileSync(todoFile, data, { encoding: "utf-8" });
   }
 
-  add(todo: string) {
-    const newTodo: Todo = { done: false, todo };
+  add(todo: string, done?: boolean) {
+    //* done is an optional argument
+    done = done || false;
+    const newTodo: Todo = { done, todo };
     this.todos.push(newTodo);
     this.saveTodos();
   }
 
-  //todo
+  remove (index : number) {
+    this.todos.splice(index, 1);
+    this.saveTodos();
+  }
+
+  list () {
+    return this.todos;
+  }
+
+  get (index : number) : Todo {
+    return this.todos[index];
+  }
+
+  done (index : number) {
+    this.todos[index].done = true;
+    this.saveTodos();
+  }
+
+  undone (index : number) {
+    this.todos[index].done = false;
+    this.saveTodos();
+  }
 }
+
+const api = new TodoAPI();
+export default api;
