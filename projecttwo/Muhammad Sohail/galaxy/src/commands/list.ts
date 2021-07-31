@@ -1,7 +1,7 @@
 import {Command} from '@oclif/command'
 import todoAPI from '../api/todoAPI'
 import chalk from 'chalk'
-const Table  = require('cli-table')
+import Table from 'cli-table'
 
 export default class List extends Command {
   static description = 'Print out all todos'
