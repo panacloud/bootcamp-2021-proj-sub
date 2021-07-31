@@ -1,4 +1,5 @@
 import {Command} from '@oclif/command'
+import chalk from 'chalk'
 
 export default class Add extends Command {
   static description = 'Add new todo to list'
@@ -9,9 +10,9 @@ export default class Add extends Command {
     const {args} = this.parse(Add)
     const todo   = args.todo
     if (todo) {
-      this.log(`[Success] Added new todo: ${todo}`)
+      this.log(`${chalk.green('[Success]')} Added new todo: ${todo}`)
     } else {
-      this.error('please specify the new todo')
+      this.error(chalk.red('please specify the new todo'))
     }
   }
 }
