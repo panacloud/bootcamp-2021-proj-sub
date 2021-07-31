@@ -33,7 +33,8 @@ USAGE
 * [`asgard add [TODO]`](#asgard-add-todo)
 * [`asgard hello [FILE]`](#asgard-hello-file)
 * [`asgard help [COMMAND]`](#asgard-help-command)
-* [`asgard list [FILE]`](#asgard-list-file)
+* [`asgard list`](#asgard-list)
+* [`asgard remove [FILE]`](#asgard-remove-file)
 
 ## `asgard add [TODO]`
 
@@ -83,13 +84,24 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
-## `asgard list [FILE]`
+## `asgard list`
+
+Print out all todos
+
+```
+USAGE
+  $ asgard list
+```
+
+_See code: [src/commands/list.ts](https://github.com/MuhammadBilal7x/asgard/blob/v1.0.0/src/commands/list.ts)_
+
+## `asgard remove [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ asgard list [FILE]
+  $ asgard remove [FILE]
 
 OPTIONS
   -f, --force
@@ -97,5 +109,5 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/list.ts](https://github.com/MuhammadBilal7x/asgard/blob/v1.0.0/src/commands/list.ts)_
+_See code: [src/commands/remove.ts](https://github.com/MuhammadBilal7x/asgard/blob/v1.0.0/src/commands/remove.ts)_
 <!-- commandsstop -->
