@@ -1,4 +1,5 @@
 # This Todoapp Package is published on my npm regitery with global module.
+* My npm registry link: [talha-bin-salman](https://www.npmjs.com/~talha-bin-salman)
 1. You can install this package by running following command in cmd:
 	```npm i todoapp-bootcamp-urdu```
 
