@@ -6,6 +6,8 @@
     "outDir": "lib",
     "rootDir": "src",
     "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "target": "es2017"
   },
   "include": [

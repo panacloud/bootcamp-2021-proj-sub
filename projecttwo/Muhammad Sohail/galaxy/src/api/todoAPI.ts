@@ -2,7 +2,8 @@ import * as fs from 'fs'
 import * as path from 'path'
 import * as os from 'os'
 
-const todoFile = path.join(os.homedir(), 'checkme', 'todos.json')
+const todoFile = path.join(os.homedir(), 'tododb', 'todos.json')
+
 
 interface Todo {
   done: boolean;
