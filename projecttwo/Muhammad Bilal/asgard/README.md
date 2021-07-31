@@ -30,8 +30,25 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`asgard add [FILE]`](#asgard-add-file)
 * [`asgard hello [FILE]`](#asgard-hello-file)
 * [`asgard help [COMMAND]`](#asgard-help-command)
+
+## `asgard add [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ asgard add [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/add.ts](https://github.com/MuhammadBilal7x/asgard/blob/v1.0.0/src/commands/add.ts)_
 
 ## `asgard hello [FILE]`
 
