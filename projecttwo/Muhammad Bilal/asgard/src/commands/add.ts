@@ -16,7 +16,7 @@ export default class Add extends Command {
     const todo   = args.todo
     if (todo) {
       if (flags.done) {
-        todoAPI.add(todo)
+        todoAPI.add(todo, true)
       } else {
         todoAPI.add(todo)
       }
