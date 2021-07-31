@@ -33,8 +33,9 @@ USAGE
 * [`asgard add [TODO]`](#asgard-add-todo)
 * [`asgard hello [FILE]`](#asgard-hello-file)
 * [`asgard help [COMMAND]`](#asgard-help-command)
+* [`asgard interact [FILE]`](#asgard-interact-file)
 * [`asgard list`](#asgard-list)
-* [`asgard remove [FILE]`](#asgard-remove-file)
+* [`asgard remove [INDEX]`](#asgard-remove-index)
 
 ## `asgard add [TODO]`
 
@@ -43,6 +44,9 @@ Add new todo to list
 ```
 USAGE
   $ asgard add [TODO]
+
+OPTIONS
+  -d, --done
 ```
 
 _See code: [src/commands/add.ts](https://github.com/MuhammadBilal7x/asgard/blob/v1.0.0/src/commands/add.ts)_
@@ -84,6 +88,22 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
+## `asgard interact [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ asgard interact [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/interact.ts](https://github.com/MuhammadBilal7x/asgard/blob/v1.0.0/src/commands/interact.ts)_
+
 ## `asgard list`
 
 Print out all todos
@@ -95,18 +115,13 @@ USAGE
 
 _See code: [src/commands/list.ts](https://github.com/MuhammadBilal7x/asgard/blob/v1.0.0/src/commands/list.ts)_
 
-## `asgard remove [FILE]`
+## `asgard remove [INDEX]`
 
-describe the command here
+Remove a todo from list
 
 ```
 USAGE
-  $ asgard remove [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ asgard remove [INDEX]
 ```
 
 _See code: [src/commands/remove.ts](https://github.com/MuhammadBilal7x/asgard/blob/v1.0.0/src/commands/remove.ts)_
