@@ -11,6 +11,7 @@
     "@oclif/dev-cli": "^1.26.0",
     "@oclif/test": "^1.2.8",
     "@types/chai": "^4.2.21",
+    "@types/cli-table": "^0.3.0",
     "@types/mocha": "^5.2.7",
     "@types/node": "^10.17.60",
     "chai": "^4.3.4",
