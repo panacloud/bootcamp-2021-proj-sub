@@ -33,7 +33,8 @@ USAGE
 * [`galaxy add [TODO]`](#galaxy-add-todo)
 * [`galaxy hello [FILE]`](#galaxy-hello-file)
 * [`galaxy help [COMMAND]`](#galaxy-help-command)
-* [`galaxy list [FILE]`](#galaxy-list-file)
+* [`galaxy list`](#galaxy-list)
+* [`galaxy remove [FILE]`](#galaxy-remove-file)
 
 ## `galaxy add [TODO]`
 
@@ -83,13 +84,24 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
-## `galaxy list [FILE]`
+## `galaxy list`
+
+Print out all todos
+
+```
+USAGE
+  $ galaxy list
+```
+
+_See code: [src/commands/list.ts](https://github.com/MuhammadSohail92/galaxy/blob/v1.0.0/src/commands/list.ts)_
+
+## `galaxy remove [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ galaxy list [FILE]
+  $ galaxy remove [FILE]
 
 OPTIONS
   -f, --force
@@ -97,5 +109,5 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/list.ts](https://github.com/MuhammadSohail92/galaxy/blob/v1.0.0/src/commands/list.ts)_
+_See code: [src/commands/remove.ts](https://github.com/MuhammadSohail92/galaxy/blob/v1.0.0/src/commands/remove.ts)_
 <!-- commandsstop -->
