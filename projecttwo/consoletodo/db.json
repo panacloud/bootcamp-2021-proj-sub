@@ -1,0 +1,35 @@
+{
+  "todos": [
+    {
+      "id": 0,
+      "done": false
+    },
+    {
+      "id": 2,
+      "done": true
+    },
+    {
+      "id": 3,
+      "done": false
+    },
+    {
+      "id": 4,
+      "done": false
+    },
+    {
+      "task": "Hello Task",
+      "id": 5,
+      "done": false
+    },
+    {
+      "task": "Buy Fruits",
+      "id": 6,
+      "done": true
+    },
+    {
+      "task": "Buy Fruits",
+      "id": 7,
+      "done": false
+    }
+  ]
+}
