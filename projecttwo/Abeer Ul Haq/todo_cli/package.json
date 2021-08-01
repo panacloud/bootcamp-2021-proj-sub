@@ -1,0 +1,24 @@
+{
+  "name": "abeer-cli",
+  "version": "1.0.5",
+  "description": "",
+  "main": "./dist/index.js",
+  "bin": {
+    "todocli": "./dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^7.3.3",
+    "@types/lowdb": "^1.0.11",
+    "@types/node": "^16.4.9"
+  }
+}
