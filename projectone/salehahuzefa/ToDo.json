@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Buy Mango",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "task": "Buy Meat",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "task": "Get Haircut",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "task": "Make a call",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "task": "collect tickets",
+      "complete": true
+    }
+  ]
+}
