@@ -28,22 +28,27 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`consoletodo add [FILE]`](#consoletodo-add-file)
+* [`consoletodo add`](#consoletodo-add)
 * [`consoletodo hello [FILE]`](#consoletodo-hello-file)
 * [`consoletodo help [COMMAND]`](#consoletodo-help-command)
+* [`consoletodo remove`](#consoletodo-remove)
+* [`consoletodo show`](#consoletodo-show)
+* [`consoletodo update`](#consoletodo-update)
 
-## `consoletodo add [FILE]`
+## `consoletodo add`
 
-describe the command here
+Adds a new todo
 
 ```
 USAGE
-  $ consoletodo add [FILE]
+  $ consoletodo add
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -n, --task=task  task
+
+DESCRIPTION
+  ...
+     Adds a new todo to the existing list
 ```
 
 _See code: [src/commands/add.ts](https://github.com/projecttwo/consoletodo/blob/v1.0.0/src/commands/add.ts)_
@@ -84,4 +89,55 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `consoletodo remove`
+
+Removes a task by id
+
+```
+USAGE
+  $ consoletodo remove
+
+OPTIONS
+  --id=id  (required) id of the task
+
+DESCRIPTION
+  ...
+     Removes a task permanently from database by id
+```
+
+_See code: [src/commands/remove.ts](https://github.com/projecttwo/consoletodo/blob/v1.0.0/src/commands/remove.ts)_
+
+## `consoletodo show`
+
+Shows existing tasks
+
+```
+USAGE
+  $ consoletodo show
+
+DESCRIPTION
+  ...
+     Shows all the tasks sorted by their ids
+```
+
+_See code: [src/commands/show.ts](https://github.com/projecttwo/consoletodo/blob/v1.0.0/src/commands/show.ts)_
+
+## `consoletodo update`
+
+Marks a task as done
+
+```
+USAGE
+  $ consoletodo update
+
+OPTIONS
+  --id=id  (required) id of the task
+
+DESCRIPTION
+  ...
+     Marks a task as done
+```
+
+_See code: [src/commands/update.ts](https://github.com/projecttwo/consoletodo/blob/v1.0.0/src/commands/update.ts)_
 <!-- commandsstop -->
