@@ -1,0 +1,14 @@
+{
+  "todos": [
+    {
+      "task": "Buy Fruits",
+      "id": 6,
+      "done": true
+    },
+    {
+      "task": "Buy Fruits",
+      "id": 7,
+      "done": false
+    }
+  ]
+}

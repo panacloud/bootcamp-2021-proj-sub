@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Buy Chicken",
+      "isCompleted": false
+    },
+    {
+      "id": 2,
+      "task": "Buy IceCream",
+      "isCompleted": false
+    },
+    {
+      "id": 3,
+      "task": "Buy Cinama Tickets",
+      "isCompleted": false
+    },
+    {
+      "id": 4,
+      "task": "Call ALi",
+      "isCompleted": false
+    },
+    {
+      "id": 5,
+      "task": "Paid Fee",
+      "isCompleted": false
+    }
+  ]
+}
