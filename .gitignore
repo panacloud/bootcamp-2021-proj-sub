@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/projectone/sadafsiddiqui/node_modules
 /.pnp
 .pnp.js
 
