@@ -1,5 +1,5 @@
 import { TodoItem } from "./todoItem";
-import { TodoCollection } from "./todoCollection";
+import { TodoCollection } from "./todocollections";
 import * as inquirer from 'inquirer';
 let todos: TodoItem[] = [
     new TodoItem(1, "Buy Flowers"), new TodoItem(2, "Get Shoes"),
@@ -15,15 +15,17 @@ enum Commands {
 }
 function promptUser(): void {
     console.clear();
-    displayTodoList();
     inquirer.prompt({
             type: "list",
             name: "command",
             message: "Choose option",
-            choices: Object.values(Commands)
-    }).then(answers => { if (answers["command"] !== Commands.Quit) {
-        promptUser();
-    }
-})
+            choices: Object.values(Commands),
+            badProperty: true  // error here
+    }).then(answers => {
+        // no action required
+        if (answers["command"] !== Commands.Quit) {
+            promptUser();
+        }
+    })
 }
 promptUser();
