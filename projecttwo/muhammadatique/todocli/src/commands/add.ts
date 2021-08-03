@@ -1,20 +1,38 @@
-import {Command} from '@oclif/command';
+import {Command ,flags} from '@oclif/command';
+import chalk = require('chalk');
+//---------------two decorate outputs using library chalks
 
+
+//-------------------------import database
+import {Todos} from'../db'
 
 
 export default class Add extends Command{
   static description="This will add new ToDo in list"
   static args =[{name:'todo'}]
 
+  
+
+  static flags = {
+    help: flags.help({char: 'h',description: "this will add new task"}),
+    // flag with a value (-t, --todo=VALUE)
+    todo: flags.string({char: 't', description: 'task to add'}),
+  }
   async run(){
     const {args}=this.parse(Add)
     const todo = args.todo
+  
+    const task = await Todos.push({
+      task:todo,
+      id:Todos.value().length,
+      done:false
+    }).write()
 
     if(todo){
-      this.log(`[Success] Added new Task:${todo}`)
+      this.log(`${chalk.green('[Success]')} Added new Task:${todo}`)
     }
     else{
-      this.error('Please specify the New Todo')
+      this.error(chalk.red('Please specify the New Todo'))
     }
   }
 }
