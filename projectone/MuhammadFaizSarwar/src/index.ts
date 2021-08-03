@@ -8,7 +8,6 @@ let todos: TodoItem[] = [
     new TodoItem(3, "Collect Tickets"), new TodoItem(4, "Call Joe", true)];
 let collection: TodoCollection = new TodoCollection("Adam", todos);
 
-let collection: TodoCollection = new JsonTodoCollection("Adam", todos);
 
 let showCompleted = true;
 function displayTodoList(): void {
