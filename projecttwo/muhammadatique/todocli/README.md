@@ -29,10 +29,12 @@ USAGE
 # Commands
 <!-- commands -->
 * [`mytodo add [TODO]`](#mytodo-add-todo)
-* [`mytodo del [FILE]`](#mytodo-del-file)
-* [`mytodo done [FILE]`](#mytodo-done-file)
-* [`mytodo edit [FILE]`](#mytodo-edit-file)
+* [`mytodo del [ID]`](#mytodo-del-id)
+* [`mytodo done [ID]`](#mytodo-done-id)
+* [`mytodo edit [ID] [TODO]`](#mytodo-edit-id-todo)
 * [`mytodo help [COMMAND]`](#mytodo-help-command)
+* [`mytodo inquirer [INTRACT]`](#mytodo-inquirer-intract)
+* [`mytodo mycommands [FILE]`](#mytodo-mycommands-file)
 * [`mytodo showlist [SHOWLIST]`](#mytodo-showlist-showlist)
 
 ## `mytodo add [TODO]`
@@ -50,50 +52,35 @@ OPTIONS
 
 _See code: [src/commands/add.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/add.ts)_
 
-## `mytodo del [FILE]`
+## `mytodo del [ID]`
 
-describe the command here
+it will remove task
 
 ```
 USAGE
-  $ mytodo del [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ mytodo del [ID]
 ```
 
 _See code: [src/commands/del.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/del.ts)_
 
-## `mytodo done [FILE]`
+## `mytodo done [ID]`
 
-describe the command here
+it will change the status of task to done
 
 ```
 USAGE
-  $ mytodo done [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ mytodo done [ID]
 ```
 
 _See code: [src/commands/done.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/done.ts)_
 
-## `mytodo edit [FILE]`
+## `mytodo edit [ID] [TODO]`
 
-describe the command here
+it will change the status of task to done
 
 ```
 USAGE
-  $ mytodo edit [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ mytodo edit [ID] [TODO]
 ```
 
 _See code: [src/commands/edit.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/edit.ts)_
@@ -114,6 +101,36 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `mytodo inquirer [INTRACT]`
+
+describe the command here
+
+```
+USAGE
+  $ mytodo inquirer [INTRACT]
+
+OPTIONS
+  --stage=add|edit|done|delete|quit
+```
+
+_See code: [src/commands/inquirer.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/inquirer.ts)_
+
+## `mytodo mycommands [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ mytodo mycommands [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/mycommands.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/mycommands.ts)_
 
 ## `mytodo showlist [SHOWLIST]`
 
