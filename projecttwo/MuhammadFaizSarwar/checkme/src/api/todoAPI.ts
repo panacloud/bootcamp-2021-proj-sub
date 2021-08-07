@@ -32,6 +32,7 @@ class TodoAPI {
     this.saveTodos()
   }
 
+  
   remove (index : number) {
     this.todos.splice(index, 1)
     this.saveTodos()
