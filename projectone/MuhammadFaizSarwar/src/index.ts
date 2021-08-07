@@ -22,6 +22,7 @@ enum Commands {
     Purge = "Remove Completed Tasks",
     Quit = "Quit"
 }
+
 function promptAdd(): void {
     console.clear();
     inquirer.prompt({ type: "input", name: "add", message: "Enter task:"})
@@ -75,4 +76,5 @@ function promptUser(): void {
     }
 })
 }
+
 promptUser();
