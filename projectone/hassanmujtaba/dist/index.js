@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const todoCollection_1 = require("./todoCollection");
+let list = new todoCollection_1.TodoCollection();
+list.addTodos("Buy Mango");
+list.addTodos("Buy Apple");
+list.addTodos("Complete Home Work");
+list.printSelectedItem(3);
+list.taskDone(1);
+list.EditTask(2, "Buy Banana");
+list.printAll();
