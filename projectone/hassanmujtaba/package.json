@@ -1,0 +1,14 @@
+{
+  "name": "todo-typescript-api",
+  "version": "1.0.0",
+  "description": "Todo App API using typescript",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js"
+  },
+  "author": "Hassan Mujtaba",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.3.5"
+  }
+}
