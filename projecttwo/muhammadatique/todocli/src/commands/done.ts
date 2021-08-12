@@ -3,7 +3,7 @@ import { taskDone } from '../db'
 import chalk = require('chalk')
 
 export default class Done extends Command {
-  static description = 'describe the command here'
+  static description = 'Mark the todo as Completed'
 
   static flags = {
     help: flags.help({char: 'h'}),

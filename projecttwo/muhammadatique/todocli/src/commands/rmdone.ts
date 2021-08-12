@@ -1,7 +1,7 @@
 import {Command, flags} from '@oclif/command'
 import { removeDone } from '../db'
 export default class Rmdone extends Command {
-  static description = 'describe the command here'
+  static description = 'Remove all completed'
 
   static flags = {
     help: flags.help({char: 'h'}),

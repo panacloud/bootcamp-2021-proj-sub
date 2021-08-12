@@ -7,7 +7,7 @@ import Table = require('cli-table')
 
 
 export default class Showall extends Command {
-  static description = 'describe the command here'
+  static description = 'Show all todos in table'
 
   static flags = {
     help: flags.help({char: 'h'}),

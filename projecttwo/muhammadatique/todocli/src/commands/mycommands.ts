@@ -3,7 +3,7 @@ import * as inquirer from 'inquirer';
 import showall from './showall'
 import chalk = require('chalk');
 import { todoItem } from './add';
-import Add from './add';
+
 import {  
   saveTodo,
   getLastid,
@@ -16,7 +16,7 @@ import { add } from 'lodash';
 
 
 export default class Mycommands extends Command {
-  static description = 'describe the command here'
+  static description = 'Show Todo Table with command box'
 
   static flags = {
 

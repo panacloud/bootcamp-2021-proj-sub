@@ -2,7 +2,7 @@ import {Command, flags} from '@oclif/command'
 import { editTask } from '../db'
 
 export default class Edit extends Command {
-  static description = 'describe the command here'
+  static description = 'Edit and update task "required id, task"'
 
   static flags = {
     help: flags.help({char: 'h'}),

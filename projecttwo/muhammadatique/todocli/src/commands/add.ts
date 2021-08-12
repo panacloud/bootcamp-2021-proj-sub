@@ -10,7 +10,7 @@ export  class todoItem  {
 }
 
 export default class Add extends Command {
-  static description = 'Commanad used to add '
+  static description = 'Add todo write todo in colons'
 
   static flags = {
     help: flags.help({char: 'h'}),

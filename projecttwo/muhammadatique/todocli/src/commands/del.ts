@@ -2,7 +2,7 @@ import {Command, flags} from '@oclif/command'
 import { delTask } from '../db'
 
 export default class Del extends Command {
-  static description = 'describe the command here'
+  static description = 'Delete todo provide id'
 
   static flags = {
     help: flags.help({char: 'h'}),

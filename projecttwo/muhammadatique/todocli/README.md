@@ -20,7 +20,7 @@ $ npm install -g @muhammadatique/todocli
 $ todocli COMMAND
 running command...
 $ todocli (-v|--version|version)
-@muhammadatique/todocli/1.0.0 linux-x64 node-v12.19.0
+@muhammadatique/todocli/1.0.2 linux-x64 node-v12.19.0
 $ todocli --help [COMMAND]
 USAGE
   $ todocli COMMAND
@@ -40,7 +40,7 @@ USAGE
 
 ## `todocli add [TASK]`
 
-Commanad used to add
+Add todo write todo in colons
 
 ```
 USAGE
@@ -52,11 +52,11 @@ OPTIONS
   -n, --name=name  task to save
 ```
 
-_See code: [src/commands/add.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/m-atique/todocli/blob/v1.0.2/src/commands/add.ts)_
 
 ## `todocli del [ID]`
 
-describe the command here
+Delete todo provide id
 
 ```
 USAGE
@@ -68,11 +68,11 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/del.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/del.ts)_
+_See code: [src/commands/del.ts](https://github.com/m-atique/todocli/blob/v1.0.2/src/commands/del.ts)_
 
 ## `todocli done [ID]`
 
-describe the command here
+Mark the todo as Completed
 
 ```
 USAGE
@@ -84,11 +84,11 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/done.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/done.ts)_
+_See code: [src/commands/done.ts](https://github.com/m-atique/todocli/blob/v1.0.2/src/commands/done.ts)_
 
 ## `todocli edit [ID] [TASK]`
 
-describe the command here
+Edit and update task "required id, task"
 
 ```
 USAGE
@@ -100,7 +100,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/edit.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/edit.ts)_
+_See code: [src/commands/edit.ts](https://github.com/m-atique/todocli/blob/v1.0.2/src/commands/edit.ts)_
 
 ## `todocli help [COMMAND]`
 
@@ -121,7 +121,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2
 
 ## `todocli mycommands [FILE]`
 
-describe the command here
+Show Todo Table with command box
 
 ```
 USAGE
@@ -131,11 +131,11 @@ OPTIONS
   --stage=add|edit|done|delete|quit
 ```
 
-_See code: [src/commands/mycommands.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/mycommands.ts)_
+_See code: [src/commands/mycommands.ts](https://github.com/m-atique/todocli/blob/v1.0.2/src/commands/mycommands.ts)_
 
 ## `todocli rmdone [FILE]`
 
-describe the command here
+Remove all completed
 
 ```
 USAGE
@@ -147,11 +147,11 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/rmdone.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/rmdone.ts)_
+_See code: [src/commands/rmdone.ts](https://github.com/m-atique/todocli/blob/v1.0.2/src/commands/rmdone.ts)_
 
 ## `todocli showall [FILE]`
 
-describe the command here
+Show all todos in table
 
 ```
 USAGE
@@ -163,5 +163,5 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/showall.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/showall.ts)_
+_See code: [src/commands/showall.ts](https://github.com/m-atique/todocli/blob/v1.0.2/src/commands/showall.ts)_
 <!-- commandsstop -->
