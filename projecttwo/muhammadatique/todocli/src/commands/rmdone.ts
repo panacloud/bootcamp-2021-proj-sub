@@ -1,7 +1,6 @@
 import {Command, flags} from '@oclif/command'
-import { editTask } from '../db'
-
-export default class Edit extends Command {
+import { removeDone } from '../db'
+export default class Rmdone extends Command {
   static description = 'describe the command here'
 
   static flags = {
@@ -12,13 +11,11 @@ export default class Edit extends Command {
     force: flags.boolean({char: 'f'}),
   }
 
-  static args = [{name: 'id'},{name: 'task'}]
+  static args = [{name: 'file'}]
 
   async run() {
-    const {args, flags} = this.parse(Edit)
-    const id =args.id
-    const task = args.task
-    //-----------------------------------------------------------------------function to edit task (just pass id and task)
-   editTask(id,task)
+    const {args, flags} = this.parse(Rmdone)
+
+    removeDone()
   }
 }

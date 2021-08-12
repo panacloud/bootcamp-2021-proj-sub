@@ -1,10 +1,11 @@
 todocli
 =======
 
-ToDo CLI with oclif
+
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/todocli.svg)](https://npmjs.org/package/todocli)
+[![CircleCI](https://circleci.com/gh/m-atique/todocli/tree/master.svg?style=shield)](https://circleci.com/gh/m-atique/todocli/tree/master)
 [![Downloads/week](https://img.shields.io/npm/dw/todocli.svg)](https://npmjs.org/package/todocli)
 [![License](https://img.shields.io/npm/l/todocli.svg)](https://github.com/m-atique/todocli/blob/master/package.json)
 
@@ -15,83 +16,99 @@ ToDo CLI with oclif
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g todocli
-$ mytodo COMMAND
+$ npm install -g @muhammadatique/todocli
+$ todocli COMMAND
 running command...
-$ mytodo (-v|--version|version)
-todocli/0.0.0 linux-x64 node-v12.19.0
-$ mytodo --help [COMMAND]
+$ todocli (-v|--version|version)
+@muhammadatique/todocli/1.0.0 linux-x64 node-v12.19.0
+$ todocli --help [COMMAND]
 USAGE
-  $ mytodo COMMAND
+  $ todocli COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`mytodo add [TODO]`](#mytodo-add-todo)
-* [`mytodo del [ID]`](#mytodo-del-id)
-* [`mytodo done [ID]`](#mytodo-done-id)
-* [`mytodo edit [ID] [TODO]`](#mytodo-edit-id-todo)
-* [`mytodo help [COMMAND]`](#mytodo-help-command)
-* [`mytodo inquirer [INTRACT]`](#mytodo-inquirer-intract)
-* [`mytodo mycommands [FILE]`](#mytodo-mycommands-file)
-* [`mytodo showlist [SHOWLIST]`](#mytodo-showlist-showlist)
+* [`todocli add [TASK]`](#todocli-add-task)
+* [`todocli del [ID]`](#todocli-del-id)
+* [`todocli done [ID]`](#todocli-done-id)
+* [`todocli edit [ID] [TASK]`](#todocli-edit-id-task)
+* [`todocli help [COMMAND]`](#todocli-help-command)
+* [`todocli mycommands [FILE]`](#todocli-mycommands-file)
+* [`todocli rmdone [FILE]`](#todocli-rmdone-file)
+* [`todocli showall [FILE]`](#todocli-showall-file)
 
-## `mytodo add [TODO]`
+## `todocli add [TASK]`
 
-This will add new ToDo in list
+Commanad used to add
 
 ```
 USAGE
-  $ mytodo add [TODO]
+  $ todocli add [TASK]
 
 OPTIONS
-  -h, --help       this will add new task
-  -t, --todo=todo  task to add
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  task to save
 ```
 
-_See code: [src/commands/add.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/add.ts)_
 
-## `mytodo del [ID]`
+## `todocli del [ID]`
 
-it will remove task
-
-```
-USAGE
-  $ mytodo del [ID]
-```
-
-_See code: [src/commands/del.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/del.ts)_
-
-## `mytodo done [ID]`
-
-it will change the status of task to done
+describe the command here
 
 ```
 USAGE
-  $ mytodo done [ID]
+  $ todocli del [ID]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
 ```
 
-_See code: [src/commands/done.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/done.ts)_
+_See code: [src/commands/del.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/del.ts)_
 
-## `mytodo edit [ID] [TODO]`
+## `todocli done [ID]`
 
-it will change the status of task to done
-
-```
-USAGE
-  $ mytodo edit [ID] [TODO]
-```
-
-_See code: [src/commands/edit.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/edit.ts)_
-
-## `mytodo help [COMMAND]`
-
-display help for mytodo
+describe the command here
 
 ```
 USAGE
-  $ mytodo help [COMMAND]
+  $ todocli done [ID]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/done.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/done.ts)_
+
+## `todocli edit [ID] [TASK]`
+
+describe the command here
+
+```
+USAGE
+  $ todocli edit [ID] [TASK]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/edit.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/edit.ts)_
+
+## `todocli help [COMMAND]`
+
+display help for todocli
+
+```
+USAGE
+  $ todocli help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
@@ -102,27 +119,27 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
-## `mytodo inquirer [INTRACT]`
+## `todocli mycommands [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ mytodo inquirer [INTRACT]
+  $ todocli mycommands [FILE]
 
 OPTIONS
   --stage=add|edit|done|delete|quit
 ```
 
-_See code: [src/commands/inquirer.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/inquirer.ts)_
+_See code: [src/commands/mycommands.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/mycommands.ts)_
 
-## `mytodo mycommands [FILE]`
+## `todocli rmdone [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ mytodo mycommands [FILE]
+  $ todocli rmdone [FILE]
 
 OPTIONS
   -f, --force
@@ -130,20 +147,21 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/mycommands.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/mycommands.ts)_
+_See code: [src/commands/rmdone.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/rmdone.ts)_
 
-## `mytodo showlist [SHOWLIST]`
+## `todocli showall [FILE]`
 
-This will add new ToDo in list
+describe the command here
 
 ```
 USAGE
-  $ mytodo showlist [SHOWLIST]
+  $ todocli showall [FILE]
 
 OPTIONS
-  -h, --help       this will add new task
-  -t, --todo=todo  task to add
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
 ```
 
-_See code: [src/commands/showlist.ts](https://github.com/m-atique/todocli/blob/v0.0.0/src/commands/showlist.ts)_
+_See code: [src/commands/showall.ts](https://github.com/m-atique/todocli/blob/v1.0.0/src/commands/showall.ts)_
 <!-- commandsstop -->
