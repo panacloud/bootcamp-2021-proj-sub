@@ -8,7 +8,7 @@ class TodoCollection {
         this.todoItems = todoItems;
         this.nextId = 1;
         this.itemMap = new Map();
-        todoItems.forEach(item => this.itemMap.set(item.id, item));
+        todoItems.forEach((item) => this.itemMap.set(item.id, item));
     }
     addTodo(task) {
         while (this.getTodoById(this.nextId)) {
@@ -21,7 +21,7 @@ class TodoCollection {
         return this.itemMap.get(id);
     }
     getTodoItems(includeComplete) {
-        return [...this.itemMap.values()].filter(item => includeComplete || !item.complete);
+        return [...this.itemMap.values()].filter((item) => includeComplete || !item.complete);
     }
     markComplete(id, complete) {
         const todoItem = this.getTodoById(id);
@@ -30,7 +30,7 @@ class TodoCollection {
         }
     }
     removeComplete() {
-        this.itemMap.forEach(item => {
+        this.itemMap.forEach((item) => {
             if (item.complete) {
                 this.itemMap.delete(item.id);
             }
@@ -39,7 +39,7 @@ class TodoCollection {
     getItemCounts() {
         return {
             total: this.itemMap.size,
-            incomplete: this.getTodoItems(false).length
+            incomplete: this.getTodoItems(false).length,
         };
     }
 }
