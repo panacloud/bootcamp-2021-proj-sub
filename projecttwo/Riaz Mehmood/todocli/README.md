@@ -29,8 +29,25 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`todocli add [FILE]`](#todocli-add-file)
 * [`todocli hello [FILE]`](#todocli-hello-file)
 * [`todocli help [COMMAND]`](#todocli-help-command)
+
+## `todocli add [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ todocli add [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/add.ts](https://github.com/RiazMehmood/todocli/blob/v1.0.0/src/commands/add.ts)_
 
 ## `todocli hello [FILE]`
 
