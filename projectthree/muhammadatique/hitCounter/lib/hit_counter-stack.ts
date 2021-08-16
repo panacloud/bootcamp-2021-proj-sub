@@ -3,7 +3,7 @@ import * as lambda from '@aws-cdk/aws-lambda';
 import * as apigw from '@aws-cdk/aws-apigateway';
 import { HitCounter } from './hitcounter';
 
-export class CdkWorkshopStack extends cdk.Stack {
+export class HitCounterStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
