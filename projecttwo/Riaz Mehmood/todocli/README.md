@@ -1,7 +1,7 @@
 todocli
 =======
 
-A simple Todo Cli
+A simple todo cli
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/todocli.svg)](https://npmjs.org/package/todocli)
@@ -29,22 +29,18 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`todocli add [FILE]`](#todocli-add-file)
+* [`todocli add [TODO]`](#todocli-add-todo)
 * [`todocli hello [FILE]`](#todocli-hello-file)
 * [`todocli help [COMMAND]`](#todocli-help-command)
+* [`todocli list [FILE]`](#todocli-list-file)
 
-## `todocli add [FILE]`
+## `todocli add [TODO]`
 
-describe the command here
+Add new todo to list
 
 ```
 USAGE
-  $ todocli add [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ todocli add [TODO]
 ```
 
 _See code: [src/commands/add.ts](https://github.com/RiazMehmood/todocli/blob/v1.0.0/src/commands/add.ts)_
@@ -85,4 +81,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
+
+## `todocli list [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ todocli list [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/list.ts](https://github.com/RiazMehmood/todocli/blob/v1.0.0/src/commands/list.ts)_
 <!-- commandsstop -->
