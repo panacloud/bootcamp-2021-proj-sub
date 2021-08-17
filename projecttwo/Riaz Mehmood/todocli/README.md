@@ -16,11 +16,11 @@ A simple todo cli
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g todocli
+$ npm install -g todo-cli-riaz
 $ todocli COMMAND
 running command...
 $ todocli (-v|--version|version)
-todocli/1.0.0 linux-x64 node-v14.3.0
+todo-cli-riaz/1.0.0 linux-x64 node-v14.3.0
 $ todocli --help [COMMAND]
 USAGE
   $ todocli COMMAND
@@ -32,7 +32,7 @@ USAGE
 * [`todocli add [TODO]`](#todocli-add-todo)
 * [`todocli hello [FILE]`](#todocli-hello-file)
 * [`todocli help [COMMAND]`](#todocli-help-command)
-* [`todocli interact [FILE]`](#todocli-interact-file)
+* [`todocli interact`](#todocli-interact)
 * [`todocli list`](#todocli-list)
 * [`todocli remove [INDEX]`](#todocli-remove-index)
 
@@ -87,18 +87,13 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
 
-## `todocli interact [FILE]`
+## `todocli interact`
 
-describe the command here
+Enter the interacting mode
 
 ```
 USAGE
-  $ todocli interact [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ todocli interact
 ```
 
 _See code: [src/commands/interact.ts](https://github.com/RiazMehmood/todocli/blob/v1.0.0/src/commands/interact.ts)_

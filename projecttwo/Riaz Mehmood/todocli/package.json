@@ -1,10 +1,10 @@
 {
-  "name": "todocli",
+  "name": "todo-cli-riaz",
   "description": "A simple todo cli",
   "version": "1.0.0",
   "author": "Riaz Mehmood @RiazMehmood",
   "bin": {
-    "todocli": "./bin/run"
+    "riaztodocli": "./bin/run"
   },
   "bugs": "https://github.com/RiazMehmood/todocli/issues",
   "dependencies": {
