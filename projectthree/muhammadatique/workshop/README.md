@@ -1,6 +1,7 @@
 # Welcome to your CDK TypeScript project!
 
-This is a blank project for TypeScript development with CDK.
+You should explore the contents of this project. It demonstrates a CDK app with an instance of a stack (`WorkshopStack`)
+which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 

@@ -1,8 +1,8 @@
 {
-  "name": "hit_counter",
+  "name": "workshop",
   "version": "0.1.0",
   "bin": {
-    "hit_counter": "bin/hit_counter.js"
+    "workshop": "bin/workshop.js"
   },
   "scripts": {
     "build": "tsc",
@@ -11,21 +11,22 @@
     "cdk": "cdk"
   },
   "devDependencies": {
+    "aws-cdk": "1.117.0",
     "@aws-cdk/assert": "1.117.0",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
     "jest": "^26.4.2",
     "ts-jest": "^26.2.0",
-    "aws-cdk": "1.117.0",
     "ts-node": "^9.0.0",
     "typescript": "~3.9.7"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigateway": "^1.118.0",
-    "@aws-cdk/aws-dynamodb": "^1.118.0",
-    "@aws-cdk/aws-lambda": "^1.118.0",
-    "@aws-cdk/core": "1.117.0",
-    "aws-lambda": "^1.0.6",
-    "source-map-support": "^0.5.16"
+    "@aws-cdk/aws-apigateway": "^1.119.0",
+    "@aws-cdk/aws-dynamodb": "^1.119.0",
+    "@aws-cdk/aws-lambda": "^1.119.0",
+    "@aws-cdk/aws-sns": "1.117.0",
+    "@aws-cdk/aws-sns-subscriptions": "1.117.0",
+    "@aws-cdk/aws-sqs": "1.117.0",
+    "@aws-cdk/core": "1.117.0"
   }
 }
