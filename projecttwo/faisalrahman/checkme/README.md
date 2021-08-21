@@ -15,11 +15,11 @@ checkme
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g checkme
+$ npm install -g @faisalrahman36/checkme
 $ checkme COMMAND
 running command...
 $ checkme (-v|--version|version)
-checkme/0.0.0 win32-x64 node-v14.17.4
+@faisalrahman36/checkme/0.0.0 win32-x64 node-v14.17.4
 $ checkme --help [COMMAND]
 USAGE
   $ checkme COMMAND
@@ -28,8 +28,26 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`checkme add [TODO]`](#checkme-add-todo)
 * [`checkme hello [FILE]`](#checkme-hello-file)
 * [`checkme help [COMMAND]`](#checkme-help-command)
+* [`checkme interact`](#checkme-interact)
+* [`checkme list`](#checkme-list)
+* [`checkme remove [INDEX]`](#checkme-remove-index)
+
+## `checkme add [TODO]`
+
+Add new todo to list
+
+```
+USAGE
+  $ checkme add [TODO]
+
+OPTIONS
+  -d, --done
+```
+
+_See code: [src/commands/add.ts](https://github.com/faisalrahman36/checkme/blob/v0.0.0/src/commands/add.ts)_
 
 ## `checkme hello [FILE]`
 
@@ -67,4 +85,37 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
+
+## `checkme interact`
+
+Enter the interacting mode
+
+```
+USAGE
+  $ checkme interact
+```
+
+_See code: [src/commands/interact.ts](https://github.com/faisalrahman36/checkme/blob/v0.0.0/src/commands/interact.ts)_
+
+## `checkme list`
+
+Print out all todos
+
+```
+USAGE
+  $ checkme list
+```
+
+_See code: [src/commands/list.ts](https://github.com/faisalrahman36/checkme/blob/v0.0.0/src/commands/list.ts)_
+
+## `checkme remove [INDEX]`
+
+Remove a todo from list
+
+```
+USAGE
+  $ checkme remove [INDEX]
+```
+
+_See code: [src/commands/remove.ts](https://github.com/faisalrahman36/checkme/blob/v0.0.0/src/commands/remove.ts)_
 <!-- commandsstop -->

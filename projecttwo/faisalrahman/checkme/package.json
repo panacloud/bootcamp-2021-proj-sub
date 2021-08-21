@@ -1,16 +1,20 @@
 {
-  "name": "checkme",
+  "name": "@faisalrahman36/checkme",
   "version": "0.0.0",
   "author": "faisalrahman",
   "bin": {
-    "checkme": "./bin/run"
+    "checkme": "bin/run"
   },
-  "bugs": "https://github.com/faisalrahman36/checkme/issues",
+  "bugs": {
+    "url": "https://github.com/faisalrahman36/checkme/issues"
+  },
   "dependencies": {
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
     "@oclif/plugin-help": "^3.2.3",
     "chalk": "^4.1.2",
+    "cli-table": "^0.3.6",
+    "dd-trace": "^1.2.0",
     "fs": "0.0.1-security",
     "os": "^0.1.2",
     "path": "^0.12.7",
@@ -20,6 +24,7 @@
     "@oclif/dev-cli": "^1.26.0",
     "@oclif/test": "^1.2.8",
     "@types/chai": "^4.2.21",
+    "@types/inquirer": "^7.3.3",
     "@types/mocha": "^5.2.7",
     "@types/node": "^10.17.60",
     "chai": "^4.3.4",
@@ -55,7 +60,10 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "faisalrahman36/checkme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faisalrahman36/checkme.git"
+  },
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
@@ -63,5 +71,10 @@
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
   },
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "description": "checkme =======",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
 }
