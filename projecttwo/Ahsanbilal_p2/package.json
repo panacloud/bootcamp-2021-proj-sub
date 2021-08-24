@@ -1,0 +1,26 @@
+{
+  "name": "project1_prac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "bin": {
+    "todoapp": "./dist/index.js"
+    },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ahsan-cli": "^1.0.0",
+    "inquirer": "^7.3.3",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^7.3.3",
+    "@types/lowdb": "^1.0.11",
+    "@types/node": "^16.7.1",
+    "typescript": "^4.3.5"
+  }
+}
