@@ -1,6 +1,4 @@
-# todo-cli-hassanalikhan
-
-Project 02 BootCamp 2021: Todo CLI
+# BootCamp2021 Project02: Todo CLI using oclif
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/todo-cli-hassanalikhan.svg)](https://npmjs.org/package/todo-cli-hassanalikhan)
