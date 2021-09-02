@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Buy Shoes",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "task": "Buy Cloths",
+      "complete": false
+    },
+    {
+      "id": 1,
+      "task": "Buy Chicken",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "task": "Repair Bike",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "task": "Eat Biryani",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "task": "Call Naveed",
+      "complete": true
+    }
+  ]
+}
