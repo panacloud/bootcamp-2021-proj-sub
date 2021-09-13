@@ -1,0 +1,32 @@
+{
+  "name": "todoass2",
+  "version": "1.0.6",
+  "main": "./main/todoCollection.js",
+  "bin": {
+    "chalo": "./main/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Asharib Ahmed",
+  "license": "ISC",
+  "description": "bootcamp project",
+  "dependencies": {
+    "@types/node": "^16.4.3",
+    "inquirer": "^6.3.1",
+    "lowdb": "^1.0.0",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asharib90/PIAIC_Bootcamp2021_project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Asharib90/PIAIC_Bootcamp2021_project/issues"
+  },
+  "homepage": "https://github.com/Asharib90/PIAIC_Bootcamp2021_project#readme"
+}
