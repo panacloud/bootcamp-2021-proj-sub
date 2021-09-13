@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "fry fish",
+      "complete": 0
+    },
+    {
+      "id": 2,
+      "task": "clean house",
+      "complete": 1
+    },
+    {
+      "id": 3,
+      "task": "buy mangos",
+      "complete": 0
+    },
+    {
+      "id": 4,
+      "task": "apple buy",
+      "complete": 0
+    },
+    {
+      "id": 5,
+      "task": "cook chicken",
+      "complete": 0
+    }
+  ]
+}

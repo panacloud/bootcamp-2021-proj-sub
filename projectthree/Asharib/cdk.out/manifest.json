@@ -1,0 +1,1395 @@
+{
+  "version": "13.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/CdkStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcf",
+              "id": "169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcf",
+              "packaging": "zip",
+              "sourceHash": "169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcf",
+              "s3BucketParameter": "AssetParameters169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcfS3Bucket7674F226",
+              "s3KeyParameter": "AssetParameters169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcfS3VersionKeyAAA1506D",
+              "artifactHashParameter": "AssetParameters169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcfArtifactHash4E4F1BEE"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:161:23)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "CdkStack.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:86:40)",
+              "AssetCode.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:331:29)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:12:19)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.ca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681",
+              "id": "ca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681",
+              "packaging": "zip",
+              "sourceHash": "ca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681",
+              "s3BucketParameter": "AssetParametersca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681S3Bucket8D949544",
+              "s3KeyParameter": "AssetParametersca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681S3VersionKeyEFE93F18",
+              "artifactHashParameter": "AssetParametersca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681ArtifactHashF3868D5D"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:161:23)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "CdkStack.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:86:40)",
+              "AssetCode.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:331:29)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:26:21)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/HelloHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandlerServiceRole11EF7C63",
+            "trace": [
+              "new Role (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:311:31)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:12:19)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/HelloHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandler2E4FBA4D",
+            "trace": [
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:373:35)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:12:19)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/AssetParameters/169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcf/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcfS3Bucket7674F226",
+            "trace": [
+              "new FileAssetParameters (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "CdkStack.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:86:40)",
+              "AssetCode.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:331:29)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:12:19)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/AssetParameters/169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcf/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcfS3VersionKeyAAA1506D",
+            "trace": [
+              "new FileAssetParameters (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "CdkStack.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:86:40)",
+              "AssetCode.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:331:29)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:12:19)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/AssetParameters/169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcf/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters169bd8fdf1db1eee37fe1e7665acf34bea75ef00c7d54759abc560e7a80a1dcfArtifactHash4E4F1BEE",
+            "trace": [
+              "new FileAssetParameters (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "CdkStack.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:86:40)",
+              "AssetCode.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:331:29)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:12:19)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/AssetParameters/ca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681S3Bucket8D949544",
+            "trace": [
+              "new FileAssetParameters (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "CdkStack.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:86:40)",
+              "AssetCode.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:331:29)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:26:21)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/AssetParameters/ca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681S3VersionKeyEFE93F18",
+            "trace": [
+              "new FileAssetParameters (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "CdkStack.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:86:40)",
+              "AssetCode.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:331:29)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:26:21)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/AssetParameters/ca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersca3eccc24c488dec9a89af5f5d51e4995df9b38d0124369a6442bdd4b1d2b681ArtifactHashF3868D5D",
+            "trace": [
+              "new FileAssetParameters (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "CdkStack.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:86:40)",
+              "AssetCode.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:331:29)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:26:21)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/HelloHitCounter/Hits/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHits7AAEBF80",
+            "trace": [
+              "new Table (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:678:18)",
+              "new HitCounter (/home/asharib/Downloads/cdk-workshop/lib/hitcounter.ts:21:19)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:18:30)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/HelloHitCounter/HitCounterHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHitCounterHandlerServiceRoleD45002B8",
+            "trace": [
+              "new Role (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:311:31)",
+              "new HitCounter (/home/asharib/Downloads/cdk-workshop/lib/hitcounter.ts:28:20)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:18:30)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/HelloHitCounter/HitCounterHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHitCounterHandlerServiceRoleDefaultPolicy1487A60A",
+            "trace": [
+              "new Policy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:236:28)",
+              "Function.addToPrincipal (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
+              "Table.combinedGrant (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:522:29)",
+              "Table.grantReadWriteData (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:349:17)",
+              "new HitCounter (/home/asharib/Downloads/cdk-workshop/lib/hitcounter.ts:39:11)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:18:30)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/HelloHitCounter/HitCounterHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHitCounterHandlerDAEA7B37",
+            "trace": [
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:373:35)",
+              "new HitCounter (/home/asharib/Downloads/cdk-workshop/lib/hitcounter.ts:28:20)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:18:30)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointEEF1FD8F",
+            "trace": [
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:463:22)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointCloudWatchRoleC3C64E0F",
+            "trace": [
+              "new Role (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "LambdaRestApi._configureCloudWatchRole (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:289:18)",
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:481:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointAccountB8304247",
+            "trace": [
+              "LambdaRestApi._configureCloudWatchRole (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:294:22)",
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:481:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointDeployment318525DA16378dd35b5302673a11b76e9c796d27",
+            "trace": [
+              "new Deployment (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:34:21)",
+              "LambdaRestApi._configureDeployment (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:318:32)",
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:484:10)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointDeploymentStageprodB78BEEA0",
+            "trace": [
+              "new Stage (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:136:22)",
+              "LambdaRestApi._configureDeployment (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:328:30)",
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:484:10)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Endpoint8024A810",
+            "trace": [
+              "LambdaRestApi._configureDeployment (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:333:7)",
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:484:10)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Endpointproxy39E2174E",
+            "trace": [
+              "new Resource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:342:22)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:397:5)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/Default/{proxy+}/ANY/ApiPermission.CdkStackEndpointD2AFD49B.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYApiPermissionCdkStackEndpointD2AFD49BANYproxyC080954A",
+            "trace": [
+              "Function.addPermission (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:130:5)",
+              "LambdaIntegration.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:41:18)",
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:419:18)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/Default/{proxy+}/ANY/ApiPermission.Test.CdkStackEndpointD2AFD49B.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYApiPermissionTestCdkStackEndpointD2AFD49BANYproxy5071DF11",
+            "trace": [
+              "Function.addPermission (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:130:5)",
+              "LambdaIntegration.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:49:20)",
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:419:18)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYC09721C5",
+            "trace": [
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:116:22)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:419:18)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/Default/ANY/ApiPermission.CdkStackEndpointD2AFD49B.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANYApiPermissionCdkStackEndpointD2AFD49BANY323D717C",
+            "trace": [
+              "Function.addPermission (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:130:5)",
+              "LambdaIntegration.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:41:18)",
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "RootResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:416:29)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/Default/ANY/ApiPermission.Test.CdkStackEndpointD2AFD49B.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANYApiPermissionTestCdkStackEndpointD2AFD49BANY278DBB1E",
+            "trace": [
+              "Function.addPermission (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:130:5)",
+              "LambdaIntegration.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:49:20)",
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "RootResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:416:29)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/Endpoint/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANY485C938B",
+            "trace": [
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:116:22)",
+              "RootResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:416:29)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:21:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/Rendered/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterRenderedServiceRole254DB4EA",
+            "trace": [
+              "new Role (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:311:31)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:26:21)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/Rendered/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterRenderedServiceRoleDefaultPolicy9ADB8C83",
+            "trace": [
+              "new Policy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:236:28)",
+              "Function.addToPrincipal (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
+              "Table.combinedGrant (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:522:29)",
+              "Table.grantReadData (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:318:17)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:37:17)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/Rendered/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterRendered9C783E45",
+            "trace": [
+              "new Function (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:373:35)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:26:21)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpoint5A0EF326",
+            "trace": [
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:463:22)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointCloudWatchRole87B94D6A",
+            "trace": [
+              "new Role (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "LambdaRestApi._configureCloudWatchRole (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:289:18)",
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:481:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointAccount0B75E76A",
+            "trace": [
+              "LambdaRestApi._configureCloudWatchRole (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:294:22)",
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:481:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointDeployment1CE7C57660fec36114df521ab3c9e0920f512c48",
+            "trace": [
+              "new Deployment (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:34:21)",
+              "LambdaRestApi._configureDeployment (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:318:32)",
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:484:10)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointDeploymentStageprodF3901FC7",
+            "trace": [
+              "new Stage (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:136:22)",
+              "LambdaRestApi._configureDeployment (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:328:30)",
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:484:10)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointCA1B1E4B",
+            "trace": [
+              "LambdaRestApi._configureDeployment (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:333:7)",
+              "new RestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:484:10)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointproxy2F4C239F",
+            "trace": [
+              "new Resource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:342:22)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:397:5)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/Default/{proxy+}/ANY/ApiPermission.CdkStackViewHitCounterViewerEndpoint08BB20AC.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointproxyANYApiPermissionCdkStackViewHitCounterViewerEndpoint08BB20ACANYproxy4A754D29",
+            "trace": [
+              "Function.addPermission (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:130:5)",
+              "LambdaIntegration.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:41:18)",
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:419:18)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/Default/{proxy+}/ANY/ApiPermission.Test.CdkStackViewHitCounterViewerEndpoint08BB20AC.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointproxyANYApiPermissionTestCdkStackViewHitCounterViewerEndpoint08BB20ACANYproxyE9327774",
+            "trace": [
+              "Function.addPermission (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:130:5)",
+              "LambdaIntegration.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:49:20)",
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:419:18)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointproxyANYFF4B8F5B",
+            "trace": [
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:116:22)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:419:18)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/Default/ANY/ApiPermission.CdkStackViewHitCounterViewerEndpoint08BB20AC.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointANYApiPermissionCdkStackViewHitCounterViewerEndpoint08BB20ACANY4A09BE34",
+            "trace": [
+              "Function.addPermission (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:130:5)",
+              "LambdaIntegration.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:41:18)",
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "RootResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:416:29)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/Default/ANY/ApiPermission.Test.CdkStackViewHitCounterViewerEndpoint08BB20AC.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointANYApiPermissionTestCdkStackViewHitCounterViewerEndpoint08BB20ACANYB701A797",
+            "trace": [
+              "Function.addPermission (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:130:5)",
+              "LambdaIntegration.bind (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:49:20)",
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "RootResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:416:29)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/ViewHitCounter/ViewerEndpoint/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitCounterViewerEndpointANY66F2285B",
+            "trace": [
+              "new Method (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:116:22)",
+              "RootResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:416:29)",
+              "new ProxyResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new TableViewer (/home/asharib/Downloads/cdk-workshop/node_modules/cdk-dynamo-table-viewer/src/table-viewer.ts:39:18)",
+              "new CdkStack (/home/asharib/Downloads/cdk-workshop/lib/cdk-stack.ts:25:5)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/bin/cdk.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/CdkStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/home/asharib/Downloads/cdk-workshop/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/CdkStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:31:27)",
+              "/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/home/asharib/Downloads/cdk-workshop/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/home/asharib/Downloads/cdk-workshop/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "CdkStack"
+    }
+  }
+}
