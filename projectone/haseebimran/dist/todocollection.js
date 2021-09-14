@@ -30,5 +30,18 @@ class todocollection {
             todoItem.complete = complete;
         }
     }
+    removeComplete() {
+        this.itemMap.forEach(item => {
+            if (item.complete) {
+                this.itemMap.delete(item.id);
+            }
+        });
+    }
+    getItemCounts() {
+        return {
+            total: this.itemMap.size,
+            incomplete: this.getTodoItems(false).length
+        };
+    }
 }
 exports.todocollection = todocollection;
