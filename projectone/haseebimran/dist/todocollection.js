@@ -14,7 +14,7 @@ class todocollection {
         while (this.getTodoById(this.nextId)) {
             this.nextId++;
         }
-        this.todoitems.push(new todoitem_1.Todoitem(this.nextId, task));
+        this.itemMap.set(this.nextId, new todoitem_1.Todoitem(this.nextId, task));
         return this.nextId;
     }
     getTodoById(id) {
