@@ -1,6 +1,7 @@
 import { TodoItem } from "./todoItem";
 import { TodoCollection } from "./todoCollection";
 import * as inquirer from "inquirer";
+import { JsonTodoCollection } from "./jsonTodoCollection";
 
 let todos: TodoItem[] = [
   new TodoItem(1, "Buy Flowers"),
@@ -8,7 +9,8 @@ let todos: TodoItem[] = [
   new TodoItem(3, "Collect Tickets"),
   new TodoItem(4, "Call Joe", true),
 ];
-let collection: TodoCollection = new TodoCollection("Adam", todos);
+
+let collection: TodoCollection = new JsonTodoCollection("Adam", todos);
 let showCompleted = true;
 
 function displayTodoList(): void {
@@ -43,13 +45,11 @@ function promptComplete(): void {
       type: "checkbox",
       name: "complete",
       message: "Mark Tasks Complete",
-      choices: collection
-        .getTodoItems(showCompleted)
-        .map((item) => ({
-          name: item.task,
-          value: item.id,
-          checked: item.complete,
-        })),
+      choices: collection.getTodoItems(showCompleted).map((item) => ({
+        name: item.task,
+        value: item.id,
+        checked: item.complete,
+      })),
     })
     .then((answers) => {
       let completedTasks = answers["complete"] as number[];
