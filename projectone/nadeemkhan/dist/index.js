@@ -8,4 +8,4 @@ let todos = [
 ];
 let collection = new todocollection_1.TodoCollection("Adam", todos);
 console.log(`${collection.username}'s todos list!'`);
-console.log(JSON.stringify(collection.getTodoById(2)));
+collection.getTodoItems(false).forEach(item => item.printDetails());
