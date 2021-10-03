@@ -10,6 +10,7 @@ let collection: TodoCollection = new TodoCollection("Adam", todos);
 
 console.log(`${collection.username}'s todos list!'`)
 
-collection.getTodoItems(true).forEach(item=> item.printDetails());
-collection.removeComplete()
-collection.getTodoItems(true).forEach(item=> item.printDetails());
+// collection.getTodoItems(true).forEach(item=> item.printDetails());
+// collection.removeComplete()
+// collection.getTodoItems(true).forEach(item=> item.printDetails());
+console.log(collection.taskStatistics())

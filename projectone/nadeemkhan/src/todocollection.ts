@@ -1,5 +1,12 @@
 import { TodoItem } from "./todoitems";
 
+
+type taskCounts = {
+    total: number,
+    incomplete: number,
+    complete: number
+}
+
 export class TodoCollection{
     
     private nextId: number = 1;
@@ -44,5 +51,13 @@ export class TodoCollection{
                 this.itemMap.delete(item.id);
             }
         })
+    }
+
+    taskStatistics(): taskCounts{
+        return {
+            total: this.itemMap.size,
+            incomplete: this.getTodoItems(false).length,
+            complete: this.itemMap.size - this.getTodoItems(false).length
+        }
     }
 }

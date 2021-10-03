@@ -39,5 +39,12 @@ class TodoCollection {
             }
         });
     }
+    taskStatistics() {
+        return {
+            total: this.itemMap.size,
+            incomplete: this.getTodoItems(false).length,
+            complete: this.itemMap.size - this.getTodoItems(false).length
+        };
+    }
 }
 exports.TodoCollection = TodoCollection;
