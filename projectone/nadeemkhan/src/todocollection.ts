@@ -10,7 +10,7 @@ type taskCounts = {
 export class TodoCollection{
     
     private nextId: number = 1;
-    private itemMap = new Map<number, TodoItem>();
+    protected itemMap = new Map<number, TodoItem>();
 
     public constructor(public username: string, public todoItems: TodoItem[] = []){
         todoItems.forEach(item => this.itemMap.set(item.id, item))

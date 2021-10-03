@@ -1,18 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const todocollection_1 = require("./todocollection");
 const todoitems_1 = require("./todoitems");
+const jsonTodoCollection_1 = require("./jsonTodoCollection");
 const inquirer = require("inquirer");
 let todos = [
     new todoitems_1.TodoItem(1, "Buy Flowers"), new todoitems_1.TodoItem(2, "Get Shoes"),
     new todoitems_1.TodoItem(3, "Collect Tickets"), new todoitems_1.TodoItem(4, "Call Joe", true)
 ];
-let collection = new todocollection_1.TodoCollection("Adam", todos);
-// console.log(`${collection.username}'s todos list!'`)
-// collection.getTodoItems(true).forEach(item=> item.printDetails());
-// collection.removeComplete()
-// collection.getTodoItems(true).forEach(item=> item.printDetails());
-// console.log(collection.taskStatistics())
+let collection = new jsonTodoCollection_1.JsonTodoCollection("Adam", todos);
 let showComplete = true;
 function displayTodoList() {
     console.log(`${collection.username}'s Todo List `);

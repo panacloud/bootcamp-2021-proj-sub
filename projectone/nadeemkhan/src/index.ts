@@ -1,5 +1,6 @@
 import { TodoCollection } from './todocollection';
 import { TodoItem } from "./todoitems";
+import { JsonTodoCollection } from './jsonTodoCollection';
 import * as inquirer from 'inquirer';
 
 let todos: TodoItem[] = [
@@ -7,14 +8,8 @@ let todos: TodoItem[] = [
     new TodoItem(3, "Collect Tickets"), new TodoItem(4, "Call Joe", true)
 ];
 
-let collection: TodoCollection = new TodoCollection("Adam", todos);
+let collection: TodoCollection = new JsonTodoCollection("Adam", todos);
 
-// console.log(`${collection.username}'s todos list!'`)
-
-// collection.getTodoItems(true).forEach(item=> item.printDetails());
-// collection.removeComplete()
-// collection.getTodoItems(true).forEach(item=> item.printDetails());
-// console.log(collection.taskStatistics())
 let showComplete = true
 function displayTodoList(): void {
     console.log(`${collection.username}'s Todo List `);
