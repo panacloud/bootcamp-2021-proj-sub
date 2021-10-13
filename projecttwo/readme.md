@@ -1,3 +1,22 @@
+
+To compile the code:
+
+Got to checkme folder and run 'tsc'
+
+To install from public npm registry:
+
+npm install @faisalrahman36/checkme -g
+
+To run the code:
+
+checkme add <string: task name>
+
+checkme list
+
+checkme remove <int: task index>
+
+
+
 # Project Two Requirements
 
 Build a Todo Command Line Interface App using Typescript and oclif, publish it as a global npm package.
