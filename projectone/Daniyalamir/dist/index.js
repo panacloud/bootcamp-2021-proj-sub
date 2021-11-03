@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const todocollection_1 = require("./todocollection");
+console.clear();
+let Grocery = new todocollection_1.ItemCollection();
+Grocery.addTodoItems("purchase sabzii");
+Grocery.addTodoItems("purchase plates and bowls");
+Grocery.addTodoItems("purchase child cloths");
+Grocery.taskDone(2);
+Grocery.taskDone(3);
+Grocery.printDetails();
