@@ -1,0 +1,65 @@
+{
+  "name": "checkme",
+  "description": "Creating a simple todo app in cli",
+  "version": "1.0.0",
+  "author": "Sultan @Sultan336",
+  "bin": {
+    "checkme": "./bin/run"
+  },
+  "bugs": "https://github.com/Sultan336/checkme/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.2",
+    "chalk": "^4.1.1",
+    "cli-table": "^0.3.6",
+    "tslib": "^1.14.1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.26.0",
+    "@oclif/test": "^1.2.8",
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^10.17.60",
+    "chai": "^4.3.4",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
+    "globby": "^10.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.10"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/Sultan336/checkme",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "checkme",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "Sultan336/checkme",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
