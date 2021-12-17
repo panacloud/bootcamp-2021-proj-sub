@@ -1,0 +1,20 @@
+{
+  "name": "todo-app-typescript",
+  "version": "1.0.0",
+  "description": "Project 01 BootCamp 2021 : Todo Console and Persistent Data App in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hassan Ali Khan",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.1.2",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^7.3.3",
+    "@types/lowdb": "^1.0.11"
+  }
+}
