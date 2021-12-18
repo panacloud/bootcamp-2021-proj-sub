@@ -117,65 +117,65 @@ export class HassanalikhanStack extends Stack {
         TABLE_NAME_ORDER: allOrdersTable.tableName,
       },
     });
-    // // Lambda function to list all orders
-    // const allOrdersFunction = new lambda.Function(this, "allOrdersFunction", {
-    //   functionName: "All-Orders-Function-Simple-Book-Api",
-    //   runtime: lambda.Runtime.NODEJS_14_X,
-    //   code: lambda.Code.fromAsset("lambdas"),
-    //   handler: "allOrders.handler",
-    //   memorySize: 1024,
-    //   environment: {
-    //     TABLE_NAME_USER: usersTable.tableName,
-    //     TABLE_NAME_ORDER: allOrdersTable.tableName,
-    //   },
-    // });
-    // // Lambda function to get one order
-    // const oneOrderFunction = new lambda.Function(this, "oneOrderFunction", {
-    //   functionName: "One-Order-Function-Simple-Book-Api",
-    //   runtime: lambda.Runtime.NODEJS_14_X,
-    //   code: lambda.Code.fromAsset("lambdas"),
-    //   handler: "oneOrder.handler",
-    //   memorySize: 1024,
-    //   environment: {
-    //     TABLE_NAME_USER: usersTable.tableName,
-    //     TABLE_NAME_ORDER: allOrdersTable.tableName,
-    //     PRIMARY_KEY_ORDER: "orderID",
-    //   },
-    // });
-    // // Lambda function to delete one order
-    // const deleteOneOrderFunction = new lambda.Function(
-    //   this,
-    //   "deleteOneOrderFunction",
-    //   {
-    //     functionName: "Delete-One-Order-Function-Simple-Book-Api",
-    //     runtime: lambda.Runtime.NODEJS_14_X,
-    //     code: lambda.Code.fromAsset("lambdas"),
-    //     handler: "deleteOneOrder.handler",
-    //     memorySize: 1024,
-    //     environment: {
-    //       TABLE_NAME_USER: usersTable.tableName,
-    //       TABLE_NAME_ORDER: allOrdersTable.tableName,
-    //       PRIMARY_KEY_ORDER: "orderID",
-    //     },
-    //   }
-    // );
-    // // Lambda fumction to update one order
-    // const updateOneOrderFunction = new lambda.Function(
-    //   this,
-    //   "updateOneOrderFunction",
-    //   {
-    //     functionName: "Update-One-Order-Function-Simple-Book-Api",
-    //     runtime: lambda.Runtime.NODEJS_14_X,
-    //     code: lambda.Code.fromAsset("lambdas"),
-    //     handler: "updateOneOrder.handler",
-    //     memorySize: 1024,
-    //     environment: {
-    //       TABLE_NAME_USER: usersTable.tableName,
-    //       TABLE_NAME_ORDER: allOrdersTable.tableName,
-    //       PRIMARY_KEY_ORDER: "orderID",
-    //     },
-    //   }
-    // );
+    // Lambda function to list all orders
+    const allOrdersFunction = new lambda.Function(this, "allOrdersFunction", {
+      functionName: "All-Orders-Function-Simple-Book-Api",
+      runtime: lambda.Runtime.NODEJS_14_X,
+      code: lambda.Code.fromAsset("lambdas"),
+      handler: "allOrders.handler",
+      memorySize: 1024,
+      environment: {
+        TABLE_NAME_USER: usersTable.tableName,
+        TABLE_NAME_ORDER: allOrdersTable.tableName,
+      },
+    });
+    // Lambda function to get one order
+    const oneOrderFunction = new lambda.Function(this, "oneOrderFunction", {
+      functionName: "One-Order-Function-Simple-Book-Api",
+      runtime: lambda.Runtime.NODEJS_14_X,
+      code: lambda.Code.fromAsset("lambdas"),
+      handler: "oneOrder.handler",
+      memorySize: 1024,
+      environment: {
+        TABLE_NAME_USER: usersTable.tableName,
+        TABLE_NAME_ORDER: allOrdersTable.tableName,
+        PRIMARY_KEY_ORDER: "orderID",
+      },
+    });
+    // Lambda function to delete one order
+    const deleteOneOrderFunction = new lambda.Function(
+      this,
+      "deleteOneOrderFunction",
+      {
+        functionName: "Delete-One-Order-Function-Simple-Book-Api",
+        runtime: lambda.Runtime.NODEJS_14_X,
+        code: lambda.Code.fromAsset("lambdas"),
+        handler: "deleteOneOrder.handler",
+        memorySize: 1024,
+        environment: {
+          TABLE_NAME_USER: usersTable.tableName,
+          TABLE_NAME_ORDER: allOrdersTable.tableName,
+          PRIMARY_KEY_ORDER: "orderID",
+        },
+      }
+    );
+    // Lambda fumction to update one order
+    const updateOneOrderFunction = new lambda.Function(
+      this,
+      "updateOneOrderFunction",
+      {
+        functionName: "Update-One-Order-Function-Simple-Book-Api",
+        runtime: lambda.Runtime.NODEJS_14_X,
+        code: lambda.Code.fromAsset("lambdas"),
+        handler: "updateOneOrder.handler",
+        memorySize: 1024,
+        environment: {
+          TABLE_NAME_USER: usersTable.tableName,
+          TABLE_NAME_ORDER: allOrdersTable.tableName,
+          PRIMARY_KEY_ORDER: "orderID",
+        },
+      }
+    );
 
     // ********************************
     // ***  DynamoDB's Permissions  ***
@@ -185,19 +185,19 @@ export class HassanalikhanStack extends Stack {
     allBooksTable.grantReadWriteData(allBooksFunction);
     allBooksTable.grantReadWriteData(oneBookFunction);
     allBooksTable.grantReadWriteData(placeOrderFunction);
-    // // Grant the Lambda function's read and write access to the All users table
+    // Grant the Lambda function's read and write access to the All users table
     usersTable.grantReadWriteData(userAuthFunction);
     usersTable.grantReadWriteData(placeOrderFunction);
-    // usersTable.grantReadWriteData(allOrdersFunction);
-    // usersTable.grantReadWriteData(oneOrderFunction);
-    // usersTable.grantReadWriteData(deleteOneOrderFunction);
-    // usersTable.grantReadWriteData(updateOneOrderFunction);
-    // // Grant the Lambda function's read and write access to the All orders table
+    usersTable.grantReadWriteData(allOrdersFunction);
+    usersTable.grantReadWriteData(oneOrderFunction);
+    usersTable.grantReadWriteData(deleteOneOrderFunction);
+    usersTable.grantReadWriteData(updateOneOrderFunction);
+    // Grant the Lambda function's read and write access to the All orders table
     allOrdersTable.grantReadWriteData(placeOrderFunction);
-    // allOrdersTable.grantReadWriteData(allOrdersFunction);
-    // allOrdersTable.grantReadWriteData(oneOrderFunction);
-    // allOrdersTable.grantReadWriteData(deleteOneOrderFunction);
-    // allOrdersTable.grantReadWriteData(updateOneOrderFunction);
+    allOrdersTable.grantReadWriteData(allOrdersFunction);
+    allOrdersTable.grantReadWriteData(oneOrderFunction);
+    allOrdersTable.grantReadWriteData(deleteOneOrderFunction);
+    allOrdersTable.grantReadWriteData(updateOneOrderFunction);
 
     // ********************************
     // ***         Rest API         ***
@@ -238,22 +238,22 @@ export class HassanalikhanStack extends Stack {
     const placeOrderFunctionIntegration = new apigw.LambdaIntegration(
       placeOrderFunction
     );
-    // // Lambda integration for allOrders function
-    // const allOrdersFunctionIntegration = new apigw.LambdaIntegration(
-    //   allOrdersFunction
-    // );
-    // // Lambda integration for oneOrder function
-    // const oneOrderFunctionIntegration = new apigw.LambdaIntegration(
-    //   oneOrderFunction
-    // );
-    // // Lambda integartion for deleteOrder function
-    // const deleteOneOrderFunctionIntegration = new apigw.LambdaIntegration(
-    //   deleteOneOrderFunction
-    // );
-    // // Lambda integration for UpdateOrder function
-    // const updateOneOrderFunctionIntegration = new apigw.LambdaIntegration(
-    //   updateOneOrderFunction
-    // );
+    // Lambda integration for allOrders function
+    const allOrdersFunctionIntegration = new apigw.LambdaIntegration(
+      allOrdersFunction
+    );
+    // Lambda integration for oneOrder function
+    const oneOrderFunctionIntegration = new apigw.LambdaIntegration(
+      oneOrderFunction
+    );
+    // Lambda integartion for deleteOrder function
+    const deleteOneOrderFunctionIntegration = new apigw.LambdaIntegration(
+      deleteOneOrderFunction
+    );
+    // Lambda integration for UpdateOrder function
+    const updateOneOrderFunctionIntegration = new apigw.LambdaIntegration(
+      updateOneOrderFunction
+    );
 
     // ********************************
     // ***     Resources of API     ***
@@ -268,8 +268,8 @@ export class HassanalikhanStack extends Stack {
     const userAuth = api.root.addResource("api-clients");
     // Orders resource
     const orders = api.root.addResource("orders");
-    // // One Order resource
-    // const oneOrder = orders.addResource("{id}");
+    // One Order resource
+    const oneOrder = orders.addResource("{id}");
 
     // ********************************
     // ***      Methods on API      ***
@@ -293,16 +293,16 @@ export class HassanalikhanStack extends Stack {
     userAuth.addMethod("POST", userAuthFunctionIntegration);
     // Method to place order
     orders.addMethod("POST", placeOrderFunctionIntegration);
-    // // Method to list all orders
-    // orders.addMethod("GET", allOrdersFunctionIntegration);
-    // // Method to list one order
-    // oneOrder.addMethod("GET", oneOrderFunctionIntegration);
-    // // Method to delete one order
-    // orders.addMethod("DELETE", deleteOneOrderFunctionIntegration);
-    // oneOrder.addMethod("DELETE", deleteOneOrderFunctionIntegration);
-    // // Methods to update one order
-    // orders.addMethod("PATCH", updateOneOrderFunctionIntegration);
-    // oneOrder.addMethod("PATCH", updateOneOrderFunctionIntegration);
+    // Method to list all orders
+    orders.addMethod("GET", allOrdersFunctionIntegration);
+    // Method to list one order
+    oneOrder.addMethod("GET", oneOrderFunctionIntegration);
+    // Method to delete one order
+    orders.addMethod("DELETE", deleteOneOrderFunctionIntegration);
+    oneOrder.addMethod("DELETE", deleteOneOrderFunctionIntegration);
+    // Methods to update one order
+    orders.addMethod("PATCH", updateOneOrderFunctionIntegration);
+    oneOrder.addMethod("PATCH", updateOneOrderFunctionIntegration);
 
     // ********************************
     // *** CORS option for resource ***
@@ -312,7 +312,7 @@ export class HassanalikhanStack extends Stack {
     addCorsOptions(oneBook);
     addCorsOptions(userAuth);
     addCorsOptions(orders);
-    // addCorsOptions(oneOrder);
+    addCorsOptions(oneOrder);
   }
 }
 
