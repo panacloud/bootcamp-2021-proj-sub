@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import { TodoItem } from "./todoItem";
 import { TodoCollection } from "./todoCollection";
 import * as inquirer from 'inquirer';
