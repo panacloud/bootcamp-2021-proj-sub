@@ -1,0 +1,22 @@
+{
+  "name": "todo_task_cli",
+  "version": "1.0.5",
+  "description": "",
+  "main": "./src/index.ts",
+  "bin": {
+    "todo": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aakash",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^17.0.21",
+    "inquirer": "^7.3.3",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/lowdb": "^1.0.11"
+  }
+}

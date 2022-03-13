@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "complete": false,
+      "id": 1,
+      "task": "Buy Fruits"
+    },
+    {
+      "complete": false,
+      "id": 2,
+      "task": "Complete Class 4 and 5 till 7:00pm"
+    },
+    {
+      "complete": false,
+      "id": 3,
+      "task": "Go for shooping tomorrow"
+    },
+    {
+      "complete": true,
+      "id": 4,
+      "task": "Call to the Mess Person"
+    }
+  ]
+}
