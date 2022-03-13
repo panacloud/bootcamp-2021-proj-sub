@@ -5,8 +5,8 @@ import * as inquirer from 'inquirer';
 import { JsonTodoCollection } from "./jsonTodoCollection";
 
 let todos: TodoItem[] = [
-    new TodoItem(1, "Buy Fruits"), new TodoItem(2, "Complete Class 4 and 5 till 7:00pm"),
-    new TodoItem(3, "Go for shooping tomorrow"), new TodoItem(4, "Call to the Mess Person", true)];
+    new TodoItem(1, "Buy Fruits"), new TodoItem(2, "Go Office"),
+    new TodoItem(3, "Go for shooping tomorrow"), new TodoItem(4, "Call Home", true)];
     let collection: TodoCollection = new JsonTodoCollection("Aakash", todos);
 let showCompleted = true;
 

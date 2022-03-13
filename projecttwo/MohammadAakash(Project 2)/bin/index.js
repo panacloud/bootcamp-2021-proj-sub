@@ -5,8 +5,8 @@ const todoItem_1 = require("./todoItem");
 const inquirer = require("inquirer");
 const jsonTodoCollection_1 = require("./jsonTodoCollection");
 let todos = [
-    new todoItem_1.TodoItem(1, "Buy Fruits"), new todoItem_1.TodoItem(2, "Complete Class 4 and 5 till 7:00pm"),
-    new todoItem_1.TodoItem(3, "Go for shooping tomorrow"), new todoItem_1.TodoItem(4, "Call to the Mess Person", true)
+    new todoItem_1.TodoItem(1, "Buy Fruits"), new todoItem_1.TodoItem(2, "Go Office"),
+    new todoItem_1.TodoItem(3, "Go for shooping tomorrow"), new todoItem_1.TodoItem(4, "Call Home", true)
 ];
 let collection = new jsonTodoCollection_1.JsonTodoCollection("Aakash", todos);
 let showCompleted = true;
