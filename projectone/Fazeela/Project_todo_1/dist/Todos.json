@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Buy flowers",
+      "complete": true
+    },
+    {
+      "id": 2,
+      "task": "Go for run",
+      "complete": true
+    },
+    {
+      "id": 3,
+      "task": "Eat fruits",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "task": "Bring 10 dozen's of egg from the market",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "task": "Don't be shy in studies",
+      "complete": false
+    }
+  ]
+}
